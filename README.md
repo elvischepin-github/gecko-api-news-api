@@ -1,8 +1,16 @@
-# React + Vite
+1. Pradedamas API sujungimas
+   npm install openai, ⬅️⚠️
+   susikuriu API rakta,
+   bandau paslepti savo rakta .env faile
+   problema - vite/react negali perskaityti rakto is .env failo
+   sprendimas - https://dev.to/boostup/uncaught-referenceerror-process-is-not-defined-12kg
+   problema - OpenAI API rakto naudojamas yra mokamas ir reikalaja kreditu
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+2. Randame nemokama API alternatyva - AI/ML API https://docs.aimlapi.com/
+   problema - sitas API taip pat yra limituotas
+   sprendimas - pakeisti API kategorija
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+3. Sprendimas - radome CoinGecko ir News API, kurie yra draugiski besimokanciu studentu atzvilgiu
+   gauname raktus abieju API
+   testuojame su pirmomis uzklausomis - veikia
+   pradedame testuoti su komponentais, idedame informacija
