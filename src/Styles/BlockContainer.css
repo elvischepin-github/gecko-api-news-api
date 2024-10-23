@@ -1,12 +1,13 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-div {
-    display: flex;
-    flex-wrap: wrap;
-     gap: 3%;
-     justify-content: center;
+.BlockContainer {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: space-evenly;
 }
