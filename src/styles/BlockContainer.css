@@ -5,9 +5,6 @@
 }
 
 .BlockContainer {
-  margin-top: 10px;
   display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  justify-content: space-evenly;
+  flex-direction: column;
 }

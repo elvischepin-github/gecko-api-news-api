@@ -1,58 +1,75 @@
-import { Resizable } from "re-resizable";
-import React, { useState } from "react";
+import { useState, useEffect } from "react";
+import { v4 as uuid } from "uuid";
 
 import "../styles/NewsBlock.css";
 
 function NewsBlock() {
-  const [size, setSize] = useState({ width: 600, height: 200 });
+  const [newsData, setNewsData] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  const NewsAPI = process.env.REACT_APP_NEWS_API;
+  const url = `https://newsapi.org/v2/everything?q=crypto&apiKey=${NewsAPI}`;
+  const options = { method: "GET", headers: { accept: "application/json" } };
+
+  useEffect(() => {
+    async function getApiData() {
+      try {
+        const response = await fetch(url, options);
+        const data = await response.json();
+        setNewsData(data);
+        setLoading(false);
+        console.log(data);
+      } catch (error) {
+        setError(error);
+        setLoading(false);
+        console.error(error);
+      }
+    }
+    getApiData();
+  }, []);
+
+  if (loading) return <p>Loading...</p>;
+  if (error) return <p>Error: {error.message}</p>;
 
   return (
-    <Resizable
-      size={{ width: size.width, height: size.height }}
-      onResizeStop={(e, direction, ref, delta) => {
-        setSize({
-          width: ref.offsetWidth,
-          height: ref.offsetHeight,
-        });
-      }}
-      enable={{
-        right: false,
-        left: false,
-        top: false,
-        topLeft: false,
-        topRight: false,
-        bottomLeft: false,
-        bottomRight: false,
-      }}
-      minHeight={200}
-      // minWidth={200}
-      // maxWidth={500}
-      // maxHeight={500}
-    >
-      <div className="NewsBlock">
-        <h3>Title</h3>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto
-          exercitationem, dolor rem fugit a laborum ducimus. Ad vel alias
-          aliquid perferendis iure animi ullam quisquam accusamus laborum.
-          Aliquid, corrupti architecto. Ullam hic quas cupiditate rem quaerat
-          autem veniam, unde eveniet eaque libero molestiae reprehenderit
-          aliquam, beatae similique optio excepturi tempore sint ut saepe
-          voluptatibus sunt est amet. Nesciunt, a? Accusantium! Quo, doloribus
-          voluptate at iste, placeat fugit cum consequuntur quibusdam
-          perspiciatis molestiae temporibus libero nobis pariatur. Dolor
-          officia, cumque rem modi, eius iure repellat doloribus omnis illum
-          pariatur, optio tempora? Numquam veniam commodi esse ipsa nisi
-          voluptates error, enim, molestiae sint corrupti fuga neque ex harum
-          quia iusto et sunt unde quod optio quisquam incidunt minus? Sint
-          quaerat tempora eum! Iure, nam consequuntur ea accusantium quisquam
-          perspiciatis porro eligendi, quibusdam voluptatum nisi dignissimos
-          omnis consequatur quasi sequi quos velit consectetur quaerat repellat
-          iusto sint voluptatibus? Vero dignissimos corrupti porro consequatur!
-        </p>
-        <i>dd/mm/yyyy</i>
-      </div>
-    </Resizable>
+    <>
+      {newsData && newsData.articles && newsData.articles.length > 0 ? (
+        newsData.articles.slice(1, 21).map((article) => (
+          <div className="NewsBlock" key={uuid()}>
+            <h2>{article.title}</h2>
+            <b>{article.author}</b>
+            <i>{new Date(article.publishedAt).toLocaleDateString()}</i>
+            <p>{article.description || "No description available"}</p>
+            {article.url ? (
+              <a href={article.url}>Link</a>
+            ) : (
+              <p>No link available</p>
+            )}
+
+            <br />
+            <div className="urlToImageContainter">
+              <img
+                src={article.urlToImage || "src/assets/no-image.jpg"}
+                alt="image"
+              />
+            </div>
+          </div>
+        ))
+      ) : (
+        <div className="NewsBlock">
+          <h2>Title</h2>
+          <b>Author</b>
+          <i>Date</i>
+          <p>Description</p>
+          <a href="#">Link</a>
+          <br />
+          <div className="urlToImageContainter">
+            <img src="/src/assets/no-image.jpg" alt="image" />
+          </div>
+        </div>
+      )}
+    </>
   );
 }
 
