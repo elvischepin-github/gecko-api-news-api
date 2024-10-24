@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import "../styles/NewsBlock.css";
 
 function NewsBlock() {
-  const [size, setSize] = useState({ width: 400, height: 200 });
+  const [size, setSize] = useState({ width: 600, height: 200 });
 
   return (
     <Resizable
@@ -15,7 +15,15 @@ function NewsBlock() {
           height: ref.offsetHeight,
         });
       }}
-      enable={{ right: false, left: false, top: false }}
+      enable={{
+        right: false,
+        left: false,
+        top: false,
+        topLeft: false,
+        topRight: false,
+        bottomLeft: false,
+        bottomRight: false,
+      }}
       minHeight={200}
       // minWidth={200}
       // maxWidth={500}
