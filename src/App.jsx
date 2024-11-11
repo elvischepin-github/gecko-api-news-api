@@ -1,4 +1,5 @@
 import BlockContainer from "./components/blockContainer";
+import ThreeElement from "./components/threeElement";
 
 // const GeckoAPI = process.env.REACT_APP_GECKO_API;
 // const url = `https://api.coingecko.com/api/v3/coins/list?x_cg_demo_api_key=${GeckoAPI}`;
@@ -11,6 +12,7 @@ import BlockContainer from "./components/blockContainer";
 function App() {
   return (
     <>
+      <ThreeElement />
       <BlockContainer />
     </>
   );
