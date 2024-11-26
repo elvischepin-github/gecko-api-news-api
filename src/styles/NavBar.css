@@ -1,0 +1,188 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+:root {
+  --Name: #00d493;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  height: 10vh;
+  background-color: white;
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 50px 50px 100px #efefef, -50px -50px 100px #ffffff;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  margin-right: 1rem;
+}
+
+#logo {
+  height: 10vh;
+  width: 10vh;
+}
+
+.name {
+  display: flex;
+  align-items: center;
+}
+
+#name {
+  font-size: 2rem;
+  font-weight: bolder;
+  margin: 0;
+  color: var(--Name);
+}
+
+.tabs {
+  display: flex;
+  align-items: center;
+  gap: 10rem;
+  font-size: 1.25rem;
+  flex: 1;
+  justify-content: center;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  position: relative;
+  transition: 600ms;
+}
+
+.tabs a.links[data-nav]::after {
+  content: "";
+  position: absolute;
+  bottom: -13px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: var(--Name);
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.links:hover {
+  color: var(--Name);
+}
+
+.tabs a.links[data-nav]:hover::after {
+  transform: scaleX(1);
+}
+
+.sign {
+  display: flex;
+  align-items: center;
+  font-size: 1.25rem;
+  background-color: var(--Name);
+  transition: 600ms;
+  margin-right: 15px;
+}
+
+#button {
+  color: white;
+  padding: 0.5rem;
+}
+
+.sign:hover {
+  background-color: #00a271;
+}
+
+.icon-container {
+  display: none;
+}
+
+@media (1200px <= width <= 1440px) {
+  .tabs {
+    width: auto;
+    font-size: 2rem;
+  }
+
+  .sign {
+    font-size: 1.25rem;
+  }
+}
+
+@media (800px <= width <= 1200px) {
+  .tabs {
+    justify-content: center;
+    gap: 4rem;
+  }
+
+  .sign {
+    font-size: 1.25rem;
+  }
+}
+
+@media (width < 800px) {
+  .name {
+    position: absolute;
+    left: 6rem;
+  }
+
+  .tabs {
+    display: none;
+  }
+
+  .sign {
+    display: none;
+  }
+
+  .icon-container {
+    display: flex;
+    position: absolute;
+    left: 90%;
+    font-size: 2rem;
+    cursor: pointer;
+    color: black;
+  }
+}
+
+.mobile-menu {
+  position: absolute;
+  top: 10vh;
+  right: 0;
+  background-color: white;
+  width: 15rem;
+  height: 90vh;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5rem;
+  padding: 1rem 0;
+  z-index: 1000;
+  opacity: 0;
+  transform: translateX(20px);
+  pointer-events: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.mobile-link {
+  text-decoration: none;
+  color: black;
+  font-size: 1.25rem;
+  transition: color 0.3s ease-in-out;
+  margin-top: 50px;
+}
+
+.mobile-link:hover {
+  color: var(--Name);
+}
+
+.mobile-menu.show {
+  opacity: 1;
+  transform: translateX(0);
+  pointer-events: auto;
+}

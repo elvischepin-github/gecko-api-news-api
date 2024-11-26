@@ -35,19 +35,23 @@ function NewsBlock() {
   return (
     <>
       {newsData && newsData.articles && newsData.articles.length > 0 ? (
-        newsData.articles.slice(1, 21).map((article) => (
+        newsData.articles.slice(0, 20).map((article) => (
           <div className="NewsBlock" key={uuid()}>
-            <h2>{article.title}</h2>
-            <b>{article.author}</b>
-            <i>{new Date(article.publishedAt).toLocaleDateString()}</i>
-            <p>{article.description || "No description available"}</p>
-            {article.url ? (
-              <a href={article.url}>Link</a>
-            ) : (
-              <p>No link available</p>
-            )}
+            <div className="NewsContent">
+              <h2>{article.title}</h2>
+              <b>{article.author}</b>
+              <i>{new Date(article.publishedAt).toLocaleDateString()}</i>
+              <p>{article.description || "No description available"}</p>
+              {article.url ? (
+                <a href={article.url} className="news-link" data-news>
+                  Source
+                </a>
+              ) : (
+                <p>No link available</p>
+              )}
 
-            <br />
+              <br />
+            </div>
             <div className="urlToImageContainter">
               <img
                 src={article.urlToImage || "src/assets/no-image.jpg"}
@@ -58,12 +62,14 @@ function NewsBlock() {
         ))
       ) : (
         <div className="NewsBlock">
-          <h2>Title</h2>
-          <b>Author</b>
-          <i>Date</i>
-          <p>Description</p>
-          <a href="#">Link</a>
-          <br />
+          <div className="NewsContent">
+            <h2>Title</h2>
+            <b>Author</b>
+            <i>Date</i>
+            <p>Description</p>
+            <a href="#">Source</a>
+            <br />
+          </div>
           <div className="urlToImageContainter">
             <img src="/src/assets/no-image.jpg" alt="image" />
           </div>
