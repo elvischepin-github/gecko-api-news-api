@@ -19,7 +19,7 @@ function ThreeElement() {
 
     let object;
     let controls;
-    let objToRender = "gecko";
+    let objToRender = "Gecko coin 2";
 
     const loader = new GLTFLoader();
     loader.load(
