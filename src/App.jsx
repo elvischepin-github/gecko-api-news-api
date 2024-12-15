@@ -7,9 +7,9 @@ function App() {
   return (
     <>
       <NavBarContainer />
-      {/* <ThreeBlock /> */}
+      <ThreeBlock />
       <CoinBlock />
-      {/* <NewsContainer /> */}
+      <NewsContainer />
     </>
   );
 }

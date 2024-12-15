@@ -24,7 +24,7 @@ function ThreeBlock() {
 
     // Camera setup
     const camera = new THREE.PerspectiveCamera(40, 16 / 9, 0.2, 1000);
-    camera.position.set(9, -8, 25);
+    camera.position.set(-1, -6, 20);
 
     // Renderer setup
     const renderer = new THREE.WebGLRenderer({ alpha: false });
