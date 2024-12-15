@@ -1,0 +1,16 @@
+.coinBlock {
+  width: 200px;
+  height: 400px;
+
+  overflow: scroll;
+
+  border: 1px solid red;
+}
+
+.priceChange {
+  color: red;
+}
+
+p {
+  padding: 0 !important;
+}
