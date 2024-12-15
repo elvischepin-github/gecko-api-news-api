@@ -40,18 +40,9 @@ function CoinBlock() {
       <h5 className="priceChange">
         Price change (24h): {coinData.market_data.price_change_percentage_24h}
       </h5>
-      <p>Up votes: {coinData.sentiment_votes_up_percentage}%</p>
-      <p>Down votes: {coinData.sentiment_votes_down_percentage}%</p>
-      <a href="#">Homepage</a>
-      <br />
-      <a href="#">Block chain site</a>
-      <br />
-      <p>
-        {coinData.description.en}. Lorem ipsum dolor sit amet consectetur
-        adipisicing elit. Eum sapiente incidunt, praesentium laudantium nobis
-        ipsam nam officiis cupiditate delectus optio qui veritatis debitis
-        veniam a architecto earum repellendus, quisquam temporibus?
-      </p>
+      <a href="#" className="blockChain">
+        Block chain site
+      </a>
     </div>
   );
 }

@@ -35,7 +35,8 @@ canvas {
 
   box-shadow: 0 25px 60px -5px black !important;
 
-  filter: hue-rotate(90deg);
+  /* filter: hue-rotate(90deg); */
+  filter: saturate(1.5);
 
   position: absolute !important;
 
