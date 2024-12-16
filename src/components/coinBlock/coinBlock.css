@@ -1,16 +1,65 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+:root {
+  --Links: #00d493;
+}
+
 .coinBlock {
-  width: 200px;
-  height: 400px;
+  box-sizing: border-box;
+  width: 17rem;
+  height: 20rem;
+  padding-top: 20px;
+  border: 1px solid #ccc;
+  border-radius: 50% 50% 50% 50% / 10% 10% 10% 10%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  transition: 500ms ease-in-out;
+  background-color: rgba(255, 255, 255, 0.719);
+}
 
-  overflow: scroll;
+.coinBlock img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  margin: 12px auto;
+  border-radius: 0% 30% 15% 30% / 0% 30% 15% 30%;
+}
 
-  border: 1px solid red;
+.coinBlock h4 {
+  font-size: 1.4rem;
+  color: var(--Links);
+}
+
+.coinBlock h5 {
+  margin: 10px 0;
+  font-size: 1rem;
+  color: #555;
 }
 
 .priceChange {
-  color: red;
+  color: #d9534f !important;
 }
 
-p {
-  padding: 0 !important;
+.blockChain {
+  position: relative;
+  top: 20px;
+  font-size: 1.1rem;
+  color: black;
+  text-decoration: none;
+  transition: 500ms ease-in-out;
+  padding: 0;
+}
+
+.blockChain:hover {
+  transform: scale(1.1) !important;
+  color: var(--Links);
+  transition: 500ms ease-in-out;
+}
+
+.coinBlock:hover {
+  transform: scale(1.05);
+  transition: 500ms ease-in-out;
+  background-color: rgba(255, 255, 255, 0.836);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
 }
