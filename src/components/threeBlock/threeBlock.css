@@ -9,6 +9,7 @@
   align-items: center;
   justify-content: center;
 }
+
 .TV {
   background-image: url(../src/assets/dall-e-3.1.jpg);
   background-repeat: no-repeat;
@@ -26,8 +27,8 @@ canvas {
   width: 485px !important;
   height: 260px !important;
 
-  border: 4px solid black !important;
-  border-radius: 2%;
+  border: 2px solid rgb(38, 21, 0) !important;
+  border-radius: 5px;
 
   box-shadow: -10px 10px 10px -10px #22222232 !important;
 
@@ -39,7 +40,7 @@ canvas {
   top: 154px !important;
 }
 
-@media (max-width: 1280px){
+@media (max-width: 1280px) {
   .TV {
     background-image: url("../src/assets/dall-e-3.2.jpg");
     background-size: 640px 720px;
@@ -47,7 +48,7 @@ canvas {
     width: 640px;
     height: 720px;
   }
-  canvas{
+  canvas {
     width: 485px !important;
     height: 260px !important;
 
@@ -55,7 +56,7 @@ canvas {
     top: 154px !important;
   }
 }
-@media (max-width: 640px){
+@media (max-width: 640px) {
   .containerTV {
     width: 100vw;
     height: 195px;
@@ -69,7 +70,7 @@ canvas {
 
     box-shadow: none !important;
   }
-  canvas{
+  canvas {
     width: 363.75px !important;
     height: 195px !important;
 
@@ -79,6 +80,6 @@ canvas {
     border: none !important;
     border-radius: 0 !important;
 
-    box-shadow: none
+    box-shadow: none;
   }
 }
