@@ -84,7 +84,7 @@ function ThreeBlock() {
       renderer.dispose();
       controls.dispose();
     };
-  }, []); // Run effect only once
+  }, []);
 
   return (
     <div className="containerTV">
