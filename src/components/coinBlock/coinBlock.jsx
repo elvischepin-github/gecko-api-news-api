@@ -1,6 +1,4 @@
-import { useState, useEffect, useTransition } from "react";
-import { div } from "three/webgpu";
-import { v4 as uuid } from "uuid";
+import { useState } from "react";
 import "./coinBlock.css";
 
 function CoinBlock() {
@@ -12,22 +10,22 @@ function CoinBlock() {
   const url = `https://api.coingecko.com/api/v3/coins/xiaojie?x_cg_demo_api_key=${GeckoAPI}`;
   const options = { method: "GET", headers: { accept: "application/json" } };
 
-  useEffect(() => {
-    async function getApiData() {
-      try {
-        const response = await fetch(url, options);
-        const data = await response.json();
-        setCoinData(data);
-        setLoading(false);
-        console.log(data);
-      } catch (error) {
-        setError(error);
-        setLoading(false);
-        console.error(error);
-      }
-    }
-    getApiData();
-  }, []);
+  // useEffect(() => {
+  //   async function getApiData() {
+  //     try {
+  //       const response = await fetch(url, options);
+  //       const data = await response.json();
+  //       setCoinData(data);
+  //       setLoading(false);
+  //       // console.log(data);
+  //     } catch (error) {
+  //       setError(error);
+  //       setLoading(false);
+  //       console.error(error);
+  //     }
+  //   }
+  //   getApiData();
+  // }, []);
 
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error: {error.message}</p>;

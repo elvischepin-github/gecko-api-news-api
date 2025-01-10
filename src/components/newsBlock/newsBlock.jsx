@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 import { v4 as uuid } from "uuid";
 
 import "./newsBlock.css";
@@ -19,7 +19,7 @@ function NewsBlock() {
         const data = await response.json();
         setNewsData(data);
         setLoading(false);
-        console.log(data);
+        // console.log(data);
       } catch (error) {
         setError(error);
         setLoading(false);
@@ -33,50 +33,40 @@ function NewsBlock() {
   if (error) return <p>Error: {error.message}</p>;
 
   return (
-    <>
-      {newsData && newsData.articles && newsData.articles.length > 0 ? (
-        newsData.articles.slice(0, 20).map((article) => (
-          <div className="newsBlock" key={uuid()}>
-            <div className="newsContent">
-              <h2>{article.title}</h2>
-              <b>{article.author}</b>
-              <i>{new Date(article.publishedAt).toLocaleDateString()}</i>
-              <p>{article.description || "No description available"}</p>
-              {article.url ? (
-                <a href={article.url} className="news-link" data-news>
-                  Source
-                </a>
-              ) : (
-                <p>No link available</p>
-              )}
-
-              <br />
-            </div>
-            <div className="urlToImageContainter">
-              <img
-                src={article.urlToImage || "src/assets/no-image.jpg"}
-                alt="image"
-              />
-            </div>
-          </div>
-        ))
+<>
+  {newsData && newsData.articles && newsData.articles.length > 0 ? (
+    newsData.articles.slice(0, 20).map((article) => (
+      article.title === "[Removed]" ? (
+        console.log("[Removed]"), 
+        null
       ) : (
-        <div className="newsBlock">
+        <div className="newsBlock" key={uuid()}>
           <div className="newsContent">
-            <h2>Title</h2>
-            <b>Author</b>
-            <i>Date</i>
-            <p>Description</p>
-            <a href="#">Source</a>
+            <h2>{article.title}</h2>
+            <b>{article.author}</b>
+            <i>{new Date(article.publishedAt).toLocaleDateString()}</i>
+            <p>{article.description || "No description available"}</p>
+            {article.url ? (
+              <a href={article.url} className="news-link" data-news>
+                Source
+              </a>
+            ) : (
+              <p>No link available</p>
+            )}
             <br />
           </div>
           <div className="urlToImageContainter">
-            <img src="/src/assets/no-image.jpg" alt="image" />
+            <img
+              src={article.urlToImage || "src/assets/no-image.jpg"}
+              alt="image"
+            />
           </div>
         </div>
-      )}
-    </>
-  );
+      )
+    ))
+  ) : null} {/* Added null as the false case for the outer ternary */}
+</>
+);
 }
 
 export default NewsBlock;
