@@ -49,9 +49,11 @@ function NewsBlock() {
                       "We are sorry! There is no description available..."}
                   </p>
                   {article.url ? (
-                    <a href={article.url} className="news-link" data-news>
-                      Source
-                    </a>
+                    <button>
+                      <a href={article.url} className="news-link" data-news>
+                        Source
+                      </a>
+                    </button>
                   ) : (
                     <p>Ugh! There is no link available...</p>
                   )}

@@ -104,37 +104,69 @@ a {
   transition: color 0.3s ease-in-out;
 }
 
-.newsBlock a[data-news]::before {
-  content: "";
+button {
+  font-family: inherit;
+  display: inline-block;
+  width: 6em;
+  height: 2.6em;
+  line-height: 2.5em;
+  overflow: hidden;
+  cursor: pointer;
+  margin: 20px;
+  font-size: 17px;
+  z-index: 1;
+  color: #00d493;
+  border: 2px solid #00d493;
+  border-radius: 6px;
+  position: relative;
+}
+
+button::before {
   position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%) scaleX(0);
-  width: 100%;
-  height: 3px;
-  background-color: var(--Links);
-  transition: transform 0.3s ease-in-out;
+  content: "";
+  background: #00d493;
+  width: 150px;
+  height: 200px;
+  z-index: -1;
+  border-radius: 50%;
 }
 
-a:hover {
-  color: var(--Links);
+button:hover {
+  color: white !important;
 }
 
-.newsBlock a[data-news]:hover::before {
-  transform: translateX(-50%) scaleX(1);
+button:before {
+  top: 100%;
+  left: 100%;
+  transition: 0.3s all;
+}
+
+button:hover::before {
+  top: -30px;
+  left: -30px;
+}
+
+a.news-link[data-news] {
+  color: #00d493;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+a.news-link[data-news]:hover {
+  color: white;
 }
 
 @media (1200px <= width <= 1440px) {
   h2 {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
   }
 
   p {
-    font-size: 0.9rem;
+    font-size: 1rem;
   }
 
   .news-link {
-    font-size: 0.9rem;
+    font-size: 1rem;
   }
 }
 
@@ -145,15 +177,15 @@ a:hover {
     object-fit: cover;
   }
   h2 {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
   }
 
   p {
-    font-size: 0.9rem;
+    font-size: 1rem;
   }
 
   .news-link {
-    font-size: 0.9rem;
+    font-size: 1rem;
   }
 }
 
@@ -190,7 +222,7 @@ a:hover {
   .news-link {
     text-align: center;
     width: 100%;
-    font-size: 0.9rem;
+    font-size: 1rem;
   }
 
   h2 {
