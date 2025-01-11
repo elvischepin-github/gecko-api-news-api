@@ -4,7 +4,7 @@ import "./coinContainer.css";
 
 function CoinContainer() {
   return (
-      <div className="coinContainer">
+    <div className="coinContainer">
       <CoinBlock />
       <CoinBlock />
       <CoinBlock />
@@ -13,49 +13,7 @@ function CoinContainer() {
       <CoinBlock />
       <CoinBlock />
       <CoinBlock />
-      <CoinBlock />
-      <CoinBlock />
-      <CoinBlock />
-      <CoinBlock />
-      <CoinBlock />
-      <CoinBlock />
-      <CoinBlock />
-      <CoinBlock />
-      <CoinBlock />
-      <CoinBlock />
-      <CoinBlock />
-      <CoinBlock />
-      <CoinBlock />
-      <CoinBlock />
-      <CoinBlock />
-      <CoinBlock />
-      <CoinBlock />
-      <CoinBlock />
-      <CoinBlock />
-      <CoinBlock />
-      <CoinBlock />
-      <CoinBlock />
-      <CoinBlock />
-      <CoinBlock />
-      <CoinBlock />
-      <CoinBlock />
-      <CoinBlock />
-      <CoinBlock />
-      <CoinBlock />
-      <CoinBlock />
-      <CoinBlock />
-      <CoinBlock />
-      <CoinBlock />
-      <CoinBlock />
-      <CoinBlock />
-      <CoinBlock />
-      <CoinBlock />
-      <CoinBlock />
-      <CoinBlock />
-      <CoinBlock />
-      <CoinBlock />
-      <CoinBlock />
-      </div>
+    </div>
   );
 }
 export default CoinContainer;

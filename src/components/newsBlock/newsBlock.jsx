@@ -19,7 +19,7 @@ function NewsBlock() {
         const data = await response.json();
         setNewsData(data);
         setLoading(false);
-        console.log(data.articles[1].urlToImage);
+        // console.log(data);
       } catch (error) {
         setError(error);
         setLoading(false);

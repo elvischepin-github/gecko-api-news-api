@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./coinBlock.css";
 
 function CoinBlock() {
@@ -7,25 +7,27 @@ function CoinBlock() {
   const [error, setError] = useState(null);
 
   const GeckoAPI = process.env.REACT_APP_GECKO_API;
-  const url = `https://api.coingecko.com/api/v3/coins/xiaojie?x_cg_demo_api_key=${GeckoAPI}`;
+  const url = `https://api.coingecko.com/api/v3/coins/ethereum?x_cg_demo_api_key=${GeckoAPI}`;
   const options = { method: "GET", headers: { accept: "application/json" } };
 
-  // useEffect(() => {
-  //   async function getApiData() {
-  //     try {
-  //       const response = await fetch(url, options);
-  //       const data = await response.json();
-  //       setCoinData(data);
-  //       setLoading(false);
-  //       // console.log(data);
-  //     } catch (error) {
-  //       setError(error);
-  //       setLoading(false);
-  //       console.error(error);
-  //     }
-  //   }
-  //   getApiData();
-  // }, []);
+  useEffect(() => {
+    async function getApiData() {
+      try {
+        const response = await fetch(url, options);
+        const data = await response.json();
+        setCoinData(data);
+        setLoading(false);
+        // for (let i = 0; i < data.length; i++) {
+        //   console.log(`index:${i}`, data[i]);
+        // }
+      } catch (error) {
+        setError(error);
+        setLoading(false);
+        console.error(error);
+      }
+    }
+    getApiData();
+  }, []);
 
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error: {error.message}</p>;
@@ -44,18 +46,5 @@ function CoinBlock() {
     </div>
   );
 }
-// $0.004742
 
 export default CoinBlock;
-
-//   if (loading) return <p>Loading...</p>;
-//   if (error) return <p>Error: {error.message}</p>;
-
-// ============================
-//   const GeckoAPI = process.env.REACT_APP_GECKO_API;
-//   const url = `https://api.coingecko.com/api/v3/coins/chinese-doge-wow?x_cg_demo_api_key=${GeckoAPI}`;
-//   const options = { method: "GET", headers: { accept: "application/json" } };
-//   fetch(url, options)
-//     .then((res) => res.json())
-//     .then((json) => console.log(json))
-//     .catch((err) => console.error(err));
