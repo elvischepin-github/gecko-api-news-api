@@ -37,8 +37,11 @@
   color: #555;
 }
 
-.priceChange {
-  color: #d9534f !important;
+.priceDown {
+  color: #c41e3a !important;
+}
+.priceUp {
+  color: #00a36c !important;
 }
 
 .blockChain {
