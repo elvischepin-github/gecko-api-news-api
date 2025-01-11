@@ -19,4 +19,5 @@ body {
 
 body {
   overflow-y: auto;
+  margin-top: 80px !important;
 }
