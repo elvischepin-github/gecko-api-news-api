@@ -37,6 +37,20 @@
   color: #555;
 }
 
+.coinBlock ul {
+  list-style: circle;
+  margin: 0;
+  margin: auto;
+  width: max-content;
+}
+
+.coinBlock li {
+  width: max-content;
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 2px;
+}
+
 .priceDown {
   color: #c41e3a !important;
 }
