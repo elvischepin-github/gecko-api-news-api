@@ -28,9 +28,15 @@ function CoinContainer() {
       }
     }
     getApiData();
-  }, []);
 
-  if (loading) return <p>Loading...</p>;
+    const intervalId = setInterval(() => {
+      getApiData();
+    }, 30000);
+
+    return () => clearInterval(intervalId);
+  }, [url, options]);
+
+  if (loading) return <div className="loader"></div>;
   if (error) return <p>Error: {error.message}</p>;
 
   return (
