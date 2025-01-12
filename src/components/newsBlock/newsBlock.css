@@ -255,19 +255,19 @@ a.news-link[data-news]:hover {
   border-radius: 50%;
   padding: 18px;
   margin: auto;
-  background: conic-gradient(from 135deg at top, #f7f7f7 90deg, #0000 0) 0
+  background: conic-gradient(from 135deg at top, #00d493 90deg, #0000 0) 0
       calc(50% - 12px) / 48px 24px,
     radial-gradient(
         farthest-side at bottom left,
         #0000 calc(100% - 18px),
-        #f7f7f7 calc(100% - 15px) 99%,
+        #00d493 calc(100% - 15px) 99%,
         /* Adjusted accordingly */ #0000
       )
       top right/50% 50% content-box content-box,
     radial-gradient(
         farthest-side at top,
         #0000 calc(100% - 18px),
-        #f7f7f7 calc(100% - 15px) 99%,
+        #00d493 calc(100% - 15px) 99%,
         #0000
       )
       bottom / 100% 50% content-box content-box;
