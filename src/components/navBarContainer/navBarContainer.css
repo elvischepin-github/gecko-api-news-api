@@ -15,7 +15,7 @@
   top: 0px;
   z-index: 3;
   width: 100%;
-  height: 7vh;
+  height: 64px;
   background-color: white;
   font-family: "Roboto", sans-serif;
   display: flex;
@@ -30,13 +30,14 @@
 }
 
 #logo {
-  height: 7vh;
-  width: 7vh;
+  height: 64px;
+  width: 64px;
 }
 
 .name {
   display: flex;
   align-items: center;
+  letter-spacing: 5px;
 }
 
 #name {
@@ -49,10 +50,11 @@
 .tabs {
   display: flex;
   align-items: center;
-  gap: 10rem;
+  gap: 5rem;
   font-size: 1.25rem;
   flex: 1;
-  justify-content: center;
+  justify-content: right;
+  letter-spacing: 5px;
 }
 
 a {
@@ -65,7 +67,7 @@ a {
 .tabs a.links[data-nav]::after {
   content: "";
   position: absolute;
-  bottom: -13px;
+  bottom: -5px;
   left: 0;
   width: 100%;
   height: 3px;
@@ -83,22 +85,9 @@ a {
   transform: scaleX(1);
 }
 
-.sign {
-  display: flex;
-  align-items: center;
-  font-size: 1.25rem;
-  background-color: var(--meta);
-  transition: 600ms;
-  margin-right: 15px;
-}
-
 #button {
   color: white;
   padding: 0.5rem;
-}
-
-.sign:hover {
-  background-color: #00a271;
 }
 
 .icon-container {
@@ -110,16 +99,12 @@ a {
     width: auto;
     font-size: 2rem;
   }
-
-  .sign {
-    font-size: 1.25rem;
-  }
 }
 
 @media (800px <= width <= 1200px) {
   .tabs {
-    justify-content: center;
-    gap: 4rem;
+    justify-content: right;
+    gap: 1rem;
   }
 
   .sign {
@@ -137,10 +122,6 @@ a {
     display: none;
   }
 
-  .sign {
-    display: none;
-  }
-
   .icon-container {
     display: flex;
     z-index: 1;
@@ -153,14 +134,10 @@ a {
 
 @media (width < 350px) {
   #name {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
   }
 
   .tabs {
-    display: none;
-  }
-
-  .sign {
     display: none;
   }
 
@@ -168,7 +145,7 @@ a {
     display: flex;
     z-index: 1;
     padding-right: 10px;
-    font-size: 2rem;
+    font-size: 1.5rem;
     cursor: pointer;
     color: black;
   }
@@ -176,16 +153,16 @@ a {
 
 .mobile-menu {
   position: absolute;
-  top: 0%;
+  top: 64px;
   background-color: white;
-  width: 10rem;
-  height: 25rem;
+  width: 100%;
+  height: 17rem;
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 15px;
-  padding: 1rem 0;
+  gap: 10px;
+  padding: 10px 0;
   z-index: 1;
   opacity: 0;
   transform: translateX(-20px);
@@ -198,7 +175,6 @@ a {
   color: black;
   font-size: 1.25rem;
   transition: color 0.3s ease-in-out;
-  margin-top: 20px;
 }
 
 .mobile-link:hover {
