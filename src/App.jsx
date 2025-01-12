@@ -1,8 +1,9 @@
 import NavBarContainer from "./components/navBarContainer/navBarContainer";
 import ThreeBlock from "./components/threeBlock/threeBlock";
-import CoinBlock from "./components/coinBlock/coinBlock";
 import NewsContainer from "./components/newsContainer/newsContainer";
 import CoinContainer from "./components/coinContainer/coinContainer";
+import FooterContainer from "./components/footerContainer/footerContainer";
+
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <ThreeBlock />
       <CoinContainer/>
       <NewsContainer />
+      <FooterContainer/>
     </>
   );
 }

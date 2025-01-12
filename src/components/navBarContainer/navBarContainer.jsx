@@ -29,11 +29,6 @@ function NavBarContainer() {
           Crypto
         </a>
       </div>
-      <div className="sign">
-        <a href="" id="button">
-          Sign in
-        </a>
-      </div>
       <div className="icon-container">
         <FontAwesomeIcon icon={faBars} className="icon" onClick={toggleMenu} />
       </div>
