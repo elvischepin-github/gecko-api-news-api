@@ -1,0 +1,38 @@
+.newsSearch {
+  left: unset;
+  right: -150px;
+  bottom: -150px;
+
+  opacity: 0;
+}
+
+.newsToggle {
+  left: unset;
+  right: 0;
+  bottom: 0;
+
+  clip-path: polygon(0 100%, 100% 100%, 100% 0);
+}
+
+.newsToggle::before {
+  left: unset;
+  right: 11px;
+}
+
+.newsToggle::after {
+  left: unset;
+  right: 8px;
+  transform: rotate(135deg);
+}
+
+.newsToggle:hover {
+  cursor: pointer;
+}
+
+.searchNewsToggle {
+  opacity: 1;
+
+  left: unset;
+  right: 50px;
+  bottom: 50px;
+}
