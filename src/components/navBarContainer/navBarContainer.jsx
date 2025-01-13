@@ -20,7 +20,7 @@ function NavBarContainer() {
       </div>
       <div className="tabs">
         <a href="" className="links" data-nav>
-          About us
+          About Us
         </a>
         <a href="" className="links" data-nav>
           News
