@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
 :root {
   --Links: #00d493;
 }
@@ -104,7 +105,7 @@ a {
   transition: color 0.3s ease-in-out;
 }
 
-button {
+.custom-button {
   font-family: inherit;
   display: inline-block;
   width: 6em;
@@ -114,36 +115,32 @@ button {
   cursor: pointer;
   margin: 20px;
   font-size: 17px;
-  z-index: 1;
   color: #00d493;
   border: 2px solid #00d493;
   border-radius: 6px;
   position: relative;
 }
 
-button::before {
+.custom-button::before {
   position: absolute;
   content: "";
   background: #00d493;
   width: 150px;
   height: 200px;
-  z-index: -1;
   border-radius: 50%;
-}
-
-button:hover {
-  color: white !important;
-}
-
-button:before {
   top: 100%;
   left: 100%;
   transition: 0.3s all;
 }
 
-button:hover::before {
+.custom-button:hover {
+  color: white;
+}
+
+.custom-button:hover::before {
   top: -30px;
   left: -30px;
+  color: white;
 }
 
 a.news-link[data-news] {
@@ -154,6 +151,39 @@ a.news-link[data-news] {
 
 a.news-link[data-news]:hover {
   color: white;
+}
+
+/* Loading solution */
+.loader {
+  width: 200px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  padding: 18px;
+  margin: auto;
+  background: conic-gradient(from 135deg at top, #00d493 90deg, #0000 0) 0
+      calc(50% - 12px) / 48px 24px,
+    radial-gradient(
+        farthest-side at bottom left,
+        #0000 calc(100% - 18px),
+        #00d493 calc(100% - 15px) 99%,
+        #0000
+      )
+      top right/50% 50% content-box content-box,
+    radial-gradient(
+        farthest-side at top,
+        #0000 calc(100% - 18px),
+        #00d493 calc(100% - 15px) 99%,
+        #0000
+      )
+      bottom / 100% 50% content-box content-box;
+  background-repeat: no-repeat;
+  animation: l11 1s infinite linear;
+}
+
+@keyframes l11 {
+  100% {
+    transform: rotate(1turn);
+  }
 }
 
 @media (1200px <= width <= 1440px) {
@@ -176,6 +206,7 @@ a.news-link[data-news]:hover {
     height: auto;
     object-fit: cover;
   }
+
   h2 {
     font-size: 1.5rem;
   }
@@ -245,38 +276,5 @@ a.news-link[data-news]:hover {
   .newsBlock:nth-of-type(odd),
   .newsBlock:nth-of-type(even) {
     flex-direction: column;
-  }
-}
-
-/* Loading solution */
-.loader {
-  width: 200px;
-  aspect-ratio: 1;
-  border-radius: 50%;
-  padding: 18px;
-  margin: auto;
-  background: conic-gradient(from 135deg at top, #00d493 90deg, #0000 0) 0
-      calc(50% - 12px) / 48px 24px,
-    radial-gradient(
-        farthest-side at bottom left,
-        #0000 calc(100% - 18px),
-        #00d493 calc(100% - 15px) 99%,
-        /* Adjusted accordingly */ #0000
-      )
-      top right/50% 50% content-box content-box,
-    radial-gradient(
-        farthest-side at top,
-        #0000 calc(100% - 18px),
-        #00d493 calc(100% - 15px) 99%,
-        #0000
-      )
-      bottom / 100% 50% content-box content-box;
-  background-repeat: no-repeat;
-  animation: l11 1s infinite linear;
-}
-
-@keyframes l11 {
-  100% {
-    transform: rotate(1turn);
   }
 }

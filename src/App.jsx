@@ -1,19 +1,25 @@
+import React, { useState } from "react";
+
 import CoinContainer from "./components/coinContainer/coinContainer";
 import CoinSearchBlock from "./components/coinSearchBlock/coinSearchBlock";
-import FooterContainer from "./components/footerContainer/footerContainer";
 import NavBarContainer from "./components/navBarContainer/navBarContainer";
 import NewsContainer from "./components/newsContainer/newsContainer";
 import ThreeBlock from "./components/threeBlock/threeBlock";
 
 function App() {
+  const [searchedCoin, setSearchedCoin] = useState("");
+
+  const handleCoinSearch = (coinValue) => {
+    setSearchedCoin(coinValue);
+  };
+
   return (
     <>
-      <CoinSearchBlock />
+      <CoinSearchBlock onSearch={handleCoinSearch} />
       <NavBarContainer />
       <ThreeBlock />
-      <CoinContainer />
+      <CoinContainer searchedCoin={searchedCoin} />
       <NewsContainer />
-      <FooterContainer />
     </>
   );
 }
