@@ -25,6 +25,7 @@ function CoinSearchBlock({ onSearch }) {
           onChange={(e) => setCoinOfInterest(e.target.value)}
           type="text"
           placeholder="Bitcoin..."
+          onKeyDown={(e) => (e.key === "Enter" ? searchCoin() : null)}
         />
         <button onClick={searchCoin} className="custom-button search-button">
           Search
