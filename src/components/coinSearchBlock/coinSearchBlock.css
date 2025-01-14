@@ -6,7 +6,7 @@
   -webkit-backdrop-filter: blur(9.2px);
   border: 1px solid rgba(255, 255, 255, 0.3);
 
-  height: 150px;
+  height: 250px;
   width: 300px;
 
   display: flex;
@@ -78,11 +78,17 @@ h4 {
   margin-bottom: 5px;
 }
 
+.searchCoinText {
+  text-align: center;
+  padding: 10px;
+}
+
 input {
   height: 30px;
   font-size: 1.1rem;
   border-radius: 20px;
   padding-left: 15px;
+  border: 1px solid gray;
 }
 
 .searchBlock .custom-button {

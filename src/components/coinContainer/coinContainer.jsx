@@ -35,8 +35,18 @@ function CoinContainer({ searchedCoin }) {
     getApiData();
   }, [url, options, searchedCoin]);
 
-  if (loading) return <div className="loader"></div>;
-  if (error) return <p>Error: {error.message}</p>;
+  if (loading)
+    return (
+      <div className="coinContainer">
+        {[...Array(12)].map((_, i) => (
+          <div className="coinBlock coinLoaderPosition" key={i}>
+            <div className="coinLoader"></div>
+          </div>
+        ))}
+      </div>
+    );
+  if (error) return <div className="coinError"></div>;
+  // if (error) return <p>Error: {error.message}</p>;
 
   return (
     <div className="coinContainer">

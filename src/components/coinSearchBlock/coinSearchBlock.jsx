@@ -19,7 +19,10 @@ function CoinSearchBlock({ onSearch }) {
   return (
     <>
       <div className="searchBlock">
-        <h4>Type in your coin of interest!</h4>
+        <h4 className="searchCoinText">
+          Type in your coin of interest! If you want to see all coins, search
+          with empty field.
+        </h4>
         <input
           value={coinOfInterest}
           onChange={(e) => setCoinOfInterest(e.target.value)}

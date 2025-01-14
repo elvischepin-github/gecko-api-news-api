@@ -60,22 +60,6 @@
   color: #00a36c !important;
 }
 
-.blockChain {
-  position: relative;
-  top: 20px;
-  font-size: 1.1rem;
-  color: black;
-  text-decoration: none;
-  transition: 200ms ease-in-out;
-  padding: 0;
-}
-
-.blockChain:hover {
-  transform: scale(1.1) !important;
-  color: var(--Links);
-  transition: 200ms ease-in-out;
-}
-
 .coinBlock:hover {
   transform: scale(1.05);
   transition: 200ms ease-in-out;
