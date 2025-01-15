@@ -9,6 +9,7 @@ export default defineConfig(({ mode }) => {
         env.REACT_APP_GECKO_API
       ),
       "process.env.REACT_APP_NEWS_API": JSON.stringify(env.REACT_APP_NEWS_API),
+      "process.env.NODE_ENV": JSON.stringify(mode),
     },
     plugins: [react()],
     server: {
@@ -17,6 +18,15 @@ export default defineConfig(({ mode }) => {
       strictPort: true,
       watch: {
         usePolling: true,
+      },
+    },
+    build: {
+      minify: "terser",
+      sourcemap: false,
+      rollupOptions: {
+        output: {
+          manualChunks: undefined,
+        },
       },
     },
   };
