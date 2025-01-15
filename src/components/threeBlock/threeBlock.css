@@ -1,13 +1,17 @@
 .containerTV {
   width: 100vw;
   height: 720px;
-  background-color: #00533A;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 800 400'%3E%3Cdefs%3E%3CradialGradient id='a' cx='396' cy='281' r='514' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%2300E6A1'/%3E%3Cstop offset='1' stop-color='%2300533A'/%3E%3C/radialGradient%3E%3ClinearGradient id='b' gradientUnits='userSpaceOnUse' x1='400' y1='148' x2='400' y2='333'%3E%3Cstop offset='0' stop-color='%23FFFFFF' stop-opacity='0'/%3E%3Cstop offset='1' stop-color='%23FFFFFF' stop-opacity='0.5'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect fill='url(%23a)' width='800' height='400'/%3E%3Cg fill-opacity='0'%3E%3Ccircle fill='url(%23b)' cx='267.5' cy='61' r='300'/%3E%3Ccircle fill='url(%23b)' cx='532.5' cy='61' r='300'/%3E%3Ccircle fill='url(%23b)' cx='400' cy='30' r='300'/%3E%3C/g%3E%3C/svg%3E");
-  background-attachment: fixed;
-  background-size: cover;
+  background: rgb(0, 255, 177);
+  background: linear-gradient(
+    180deg,
+    rgba(0, 255, 177, 1) 0%,
+    rgba(0, 208, 144, 1) 50%,
+    rgba(0, 123, 86, 1) 100%
+  );
   display: flex;
   align-items: center;
   justify-content: center;
+  scroll-margin-top: 100px;
 }
 
 .TV {
@@ -21,6 +25,9 @@
   position: relative !important;
 
   box-shadow: inset 0 5px 70px -25px black !important;
+
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 
 canvas {
@@ -60,10 +67,13 @@ canvas {
   .containerTV {
     width: 100vw;
     height: 250px;
-    background-color: #00533A;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 800 400'%3E%3Cdefs%3E%3CradialGradient id='a' cx='396' cy='281' r='514' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%2300E6A1'/%3E%3Cstop offset='1' stop-color='%2300533A'/%3E%3C/radialGradient%3E%3ClinearGradient id='b' gradientUnits='userSpaceOnUse' x1='400' y1='148' x2='400' y2='333'%3E%3Cstop offset='0' stop-color='%23FFFFFF' stop-opacity='0'/%3E%3Cstop offset='1' stop-color='%23FFFFFF' stop-opacity='0.5'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect fill='url(%23a)' width='800' height='400'/%3E%3Cg fill-opacity='0'%3E%3Ccircle fill='url(%23b)' cx='267.5' cy='61' r='300'/%3E%3Ccircle fill='url(%23b)' cx='532.5' cy='61' r='300'/%3E%3Ccircle fill='url(%23b)' cx='400' cy='30' r='300'/%3E%3C/g%3E%3C/svg%3E");
-    background-attachment: fixed;
-    background-size: cover;
+    background: rgb(0, 255, 177);
+    background: linear-gradient(
+      180deg,
+      rgba(0, 255, 177, 1) 0%,
+      rgba(0, 208, 144, 1) 50%,
+      rgba(0, 123, 86, 1) 100%
+    );
   }
   .TV {
     background-image: none;

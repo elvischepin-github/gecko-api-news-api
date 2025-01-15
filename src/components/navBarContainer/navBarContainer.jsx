@@ -19,14 +19,17 @@ function NavBarContainer() {
         <p id="name">Gecko&News</p>
       </div>
       <div className="tabs">
-        <a href="" className="links" data-nav>
+        <a href="#about-us" className="links" data-nav>
           About Us
         </a>
-        <a href="" className="links" data-nav>
+        <a href="#news" className="links" data-nav>
           News
         </a>
-        <a href="" className="links" data-nav>
+        <a href="#crypto" className="links" data-nav>
           Crypto
+        </a>
+        <a href="#top" className="links" data-nav>
+          Top
         </a>
       </div>
       <div className="icon-container">
@@ -34,17 +37,17 @@ function NavBarContainer() {
       </div>
 
       <div className={`mobile-menu ${menuOpen ? "show" : ""}`}>
-        <a href="" className="mobile-link" data-custom>
+        <a href="#about-us" className="mobile-link" data-custom>
           About us
         </a>
-        <a href="" className="mobile-link" data-custom>
+        <a href="#news" className="mobile-link" data-custom>
           News
         </a>
-        <a href="" className="mobile-link" data-custom>
+        <a href="#crypto" className="mobile-link" data-custom>
           Crypto
         </a>
-        <a href="" className="mobile-link" data-custom>
-          Sign in
+        <a href="#top" className="mobile-link" data-custom>
+          Top
         </a>
       </div>
     </div>

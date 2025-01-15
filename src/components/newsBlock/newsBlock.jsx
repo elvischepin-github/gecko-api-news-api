@@ -39,7 +39,7 @@ function NewsBlock() {
               article.title === "[Removed]" ? (
                 (console.log("[Removed]"), null)
               ) : (
-                <div className="newsBlock" key={uuid()}>
+                <div className="newsBlock" id="news" key={uuid()}>
                   <div className="newsContent">
                     <h2>{article.title}</h2>
                     <b>{article.author}</b>

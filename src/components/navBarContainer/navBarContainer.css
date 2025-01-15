@@ -101,7 +101,7 @@ a {
   }
 }
 
-@media (800px <= width <= 1200px) {
+@media (920px <= width <= 1200px) {
   .tabs {
     justify-content: right;
     gap: 1rem;
@@ -112,7 +112,7 @@ a {
   }
 }
 
-@media (350px <= width <= 800px) {
+@media (350px <= width <= 920px) {
   .name {
     display: flex;
     justify-content: flex-start;
