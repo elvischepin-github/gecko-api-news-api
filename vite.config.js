@@ -11,29 +11,17 @@ export default defineConfig(({ mode }) => {
       "process.env.REACT_APP_NEWS_API": JSON.stringify(env.REACT_APP_NEWS_API),
       "process.env.NODE_ENV": JSON.stringify(mode),
     },
-    plugins: [
-      react({
-        babel: {
-          plugins: [
-            [
-              "babel-plugin-transform-remove-console",
-              { exclude: ["error", "warn"] },
-            ],
-          ],
-        },
-      }),
-    ],
+    plugins: [react()],
     build: {
       minify: "esbuild",
+      sourcemap: false,
+      assetsDir: "assets",
       rollupOptions: {
         output: {
           manualChunks: undefined,
         },
       },
-      treeshake: true,
     },
-    esbuild: {
-      drop: mode === "production" ? ["console", "debugger"] : [],
-    },
+    base: "/",
   };
 });
