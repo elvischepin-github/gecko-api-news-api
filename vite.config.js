@@ -11,23 +11,29 @@ export default defineConfig(({ mode }) => {
       "process.env.REACT_APP_NEWS_API": JSON.stringify(env.REACT_APP_NEWS_API),
       "process.env.NODE_ENV": JSON.stringify(mode),
     },
-    plugins: [react()],
-    server: {
-      host: true,
-      port: 5173,
-      strictPort: true,
-      watch: {
-        usePolling: true,
-      },
-    },
+    plugins: [
+      react({
+        babel: {
+          plugins: [
+            [
+              "babel-plugin-transform-remove-console",
+              { exclude: ["error", "warn"] },
+            ],
+          ],
+        },
+      }),
+    ],
     build: {
       minify: "esbuild",
-      sourcemap: false,
       rollupOptions: {
         output: {
           manualChunks: undefined,
         },
       },
+      treeshake: true,
+    },
+    esbuild: {
+      drop: mode === "production" ? ["console", "debugger"] : [],
     },
   };
 });
