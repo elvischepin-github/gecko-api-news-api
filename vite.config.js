@@ -16,12 +16,15 @@ export default defineConfig(({ mode }) => {
       minify: "esbuild",
       sourcemap: false,
       assetsDir: "assets",
-      rollupOptions: {
-        output: {
-          manualChunks: undefined,
-        },
-      },
     },
-    base: "/",
+    server: {
+      host: true,
+      port: process.env.PORT || 10000, // Use Render's PORT or fallback to 10000
+      strictPort: true,
+    },
+    preview: {
+      port: process.env.PORT || 10000,
+      host: true,
+    },
   };
 });
