@@ -7,8 +7,10 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
+# Dependencies
 node_modules
-dist
+
+# Only ignore dist-ssr, not dist
 dist-ssr
 *.local
 
@@ -24,4 +26,4 @@ dist-ssr
 *.sw?
 
 # Key
-*.env
+.env
