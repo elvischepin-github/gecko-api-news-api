@@ -87,7 +87,7 @@ function ThreeBlock() {
   }, []);
 
   return (
-    <div className="containerTV">
+    <div className="containerTV" id="top">
       <div className="TV">
         <div ref={containerRef} id="container3D"></div>
       </div>

@@ -2,7 +2,7 @@ import "./coinBlock.css";
 
 function CoinBlock({ data }) {
   return (
-    <div className="coinBlock">
+    <div className="coinBlock" id="crypto">
       <img src={data.image} alt={data.name} />
       <h4>{data.name}</h4>
       <h5>Current Price: {data.current_price.toPrecision(6)}€</h5>

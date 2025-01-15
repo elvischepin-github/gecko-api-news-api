@@ -6,7 +6,7 @@
   overflow-x: auto;
   overflow-y: hidden;
   padding: 24px;
-  background-color: #eeeeeecf;
+  background-color: rgba(233, 233, 233, 0.297);
   box-sizing: border-box;
 }
 
@@ -37,4 +37,43 @@
   to {
     transform: rotate(1turn);
   }
+}
+
+.custom-shape-divider-bottom-1736977435 {
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+  background-color: rgba(233, 233, 233, 0.297);
+}
+
+.custom-shape-divider-bottom-1736977435 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 80px;
+  transform: rotateY(180deg);
+}
+
+.custom-shape-divider-bottom-1736977435 .shape-fill {
+  fill: #007b56;
+}
+
+.custom-shape-divider-top-1736977775 {
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  background-color: rgba(233, 233, 233, 0.297);
+}
+
+.custom-shape-divider-top-1736977775 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 80px;
+  transform: rotateY(180deg);
+}
+
+.custom-shape-divider-top-1736977775 .shape-fill {
+  fill: #007b56;
 }
