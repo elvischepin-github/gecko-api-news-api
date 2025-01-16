@@ -9,13 +9,13 @@
   width: 14rem;
   height: 20rem;
   padding-top: 20px;
-  border: 1px solid #ccc;
+  border: 1px solid #ccccccba;
   border-radius: 50% 50% 50% 50% / 10% 10% 10% 10%;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   text-align: center;
   font-family: "Roboto", sans-serif;
   transition: 200ms ease-in-out;
-  background-color: rgba(255, 255, 255, 0.719);
+  background-color: rgba(233, 233, 233, 0.2);
   scroll-margin-top: 168px;
 }
 
@@ -24,7 +24,7 @@
   height: 100px;
   object-fit: contain;
   margin: auto;
-  border-radius: 0% 30% 15% 30% / 0% 30% 15% 30%;
+  filter: drop-shadow(0 5px 3px rgba(128, 128, 128, 0.2));
 }
 
 .coinBlock h4 {
@@ -64,6 +64,6 @@
 .coinBlock:hover {
   transform: scale(1.05);
   transition: 200ms ease-in-out;
-  background-color: rgba(255, 255, 255, 0.836);
-  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.1);
+  background-color: rgba(255, 255, 255, 1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
