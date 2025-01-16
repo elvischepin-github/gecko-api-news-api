@@ -12,6 +12,7 @@
   align-items: center;
   justify-content: center;
   scroll-margin-top: 100px;
+  padding-bottom: 20px;
 }
 
 .TV {
@@ -24,7 +25,7 @@
 
   position: relative !important;
 
-  box-shadow: inset 0 5px 70px -25px black !important;
+  box-shadow: 0 -10px 20px -5px black !important;
 
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
@@ -83,6 +84,7 @@ canvas {
     height: 195px;
 
     border-radius: 100px;
+    box-shadow: none !important;
   }
   canvas {
     width: 363.75px !important;
@@ -94,6 +96,6 @@ canvas {
     border: none !important;
     border-radius: 10px;
 
-    box-shadow: 0 0 15px -5px black !important;
+    box-shadow: 0 0 10px -5px black !important;
   }
 }
