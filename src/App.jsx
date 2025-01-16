@@ -9,19 +9,24 @@ import ThreeBlock from "./components/threeBlock/threeBlock";
 
 function App() {
   const [searchedCoin, setSearchedCoin] = useState("");
+  const [searchedNews, setSearchedNews] = useState("");
 
   const handleCoinSearch = (coinValue) => {
     setSearchedCoin(coinValue);
   };
 
+  const handleNewsSearch = (newsValue) => {
+    setSearchedNews(newsValue);
+  };
+
   return (
     <>
       <CoinSearchBlock onSearch={handleCoinSearch} />
-      <NewsSearchBlock />
+      <NewsSearchBlock onSearch={handleNewsSearch} />
       <NavBarContainer />
       <ThreeBlock />
       <CoinContainer searchedCoin={searchedCoin} />
-      <NewsContainer />
+      <NewsContainer searchedNews={searchedNews} />
     </>
   );
 }

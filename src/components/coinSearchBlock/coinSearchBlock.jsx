@@ -20,13 +20,13 @@ function CoinSearchBlock({ onSearch }) {
     <>
       <div className="searchBlock">
         <h4 className="searchCoinText">
-          Search coins (or leave <i className="blank">blank</i> to see all).
+          Search your <i className="blank">Coin</i> of interest!
         </h4>
         <input
           value={coinOfInterest}
           onChange={(e) => setCoinOfInterest(e.target.value)}
           type="text"
-          placeholder="Bitcoin..."
+          placeholder="Leave blank for all coins!"
           onKeyDown={(e) => (e.key === "Enter" ? searchCoin() : null)}
         />
         <button onClick={searchCoin} className="custom-button search-button">

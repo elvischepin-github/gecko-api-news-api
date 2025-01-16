@@ -3,10 +3,10 @@ import FooterContainer from "../footerContainer/footerContainer";
 
 import "./newsContainer.css";
 
-function NewsContainer() {
+function NewsContainer({ searchedNews }) {
   return (
     <div className="newsContainer">
-      <NewsBlock />
+      <NewsBlock searchedNews={searchedNews} />
       <FooterContainer />
     </div>
   );
