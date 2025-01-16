@@ -38,7 +38,7 @@ function NavBarContainer() {
 
       <div className={`mobile-menu ${menuOpen ? "show" : ""}`}>
         <a href="#about-us" className="mobile-link" data-custom>
-          About us
+          About Us
         </a>
         <a href="#news" className="mobile-link" data-custom>
           News

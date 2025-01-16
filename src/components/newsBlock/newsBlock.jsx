@@ -2,16 +2,19 @@ import { useEffect, useState } from "react";
 import { v4 as uuid } from "uuid";
 import "./newsBlock.css";
 
-function NewsBlock() {
+function NewsBlock({ searchedNews }) {
   const [newsData, setNewsData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const NewsAPI = process.env.REACT_APP_NEWS_API;
-  const url = `https://newsapi.org/v2/everything?q=crypto&apiKey=${NewsAPI}`;
+  let topic = "crypto";
+  const filteredData = searchedNews ? searchedNews : topic;
+  const url = `https://newsapi.org/v2/everything?q=${filteredData}&apiKey=${NewsAPI}`;
   const options = { method: "GET", headers: { accept: "application/json" } };
 
   useEffect(() => {
     async function getApiData() {
+      setLoading(true);
       try {
         const response = await fetch(url, options);
         const data = await response.json();
@@ -24,7 +27,7 @@ function NewsBlock() {
       }
     }
     getApiData();
-  }, []);
+  }, [url]);
 
   if (loading) return <div className="loader"></div>;
   if (error) return <p>Error: {error.message}</p>;
