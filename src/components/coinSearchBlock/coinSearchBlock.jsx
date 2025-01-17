@@ -29,10 +29,11 @@ function CoinSearchBlock({ onSearch }) {
           placeholder="Leave blank for all coins!"
           onKeyDown={(e) => (e.key === "Enter" ? searchCoin() : null)}
         />
+        <p className="searchCoinParagraph">Leave blank for all coins!</p>
         <a href="#crypto" className="search">
-        <button onClick={searchCoin} className="custom-button search-button">
-          Search
-        </button>
+          <button onClick={searchCoin} className="custom-button search-button">
+            Search
+          </button>
         </a>
       </div>
       <div onClick={FnSearchCoinTriangle} className="searchTriangle"></div>

@@ -103,6 +103,7 @@ input {
   border-radius: 20px;
   padding-left: 15px;
   border: 1px solid gray;
+  margin-bottom: 15px;
 }
 
 .searchBlock .custom-button {
@@ -139,4 +140,64 @@ input {
   width: 5.5em;
   height: 45px;
   padding: 0;
+}
+
+.searchCoinParagraph {
+  display: none;
+}
+
+@media (width <= 740px) {
+  .searchTriangle {
+    transform: scale(0.8);
+    position: fixed;
+    left: -7px;
+    bottom: -7px;
+  }
+
+  .searchBlock {
+    height: 170px;
+    width: 250px;
+  }
+
+  .searchCoinToggle {
+    left: 30px;
+    bottom: 30px;
+  }
+}
+
+@media (width <= 575px) {
+  .searchBlock {
+    height: 270px;
+    width: 150px;
+  }
+
+  input {
+    width: 130px;
+    color: white;
+    margin-bottom: 0;
+  }
+
+  .searchCoinParagraph {
+    display: flex;
+    margin: 0;
+    width: 130px;
+  }
+}
+
+@media (width <= 370px) {
+  .searchBlock {
+    transform: scale(0.8);
+  }
+
+  .searchCoinToggle {
+    left: 10px;
+    bottom: 10px;
+  }
+
+  .searchTriangle {
+    transform: scale(0.7);
+    position: fixed;
+    left: -11px;
+    bottom: -11px;
+  }
 }

@@ -43,3 +43,33 @@
   padding: 0;
   cursor: unset;
 }
+
+@media (width <= 740px) {
+  .newsToggle {
+    transform: scale(0.8);
+    position: fixed;
+    bottom: -7px;
+    right: -7px;
+  }
+
+  .searchNewsToggle {
+    left: unset;
+    right: 30px;
+    bottom: 30px;
+  }
+}
+
+@media (width <= 370px) {
+  .searchNewsToggle {
+    transform: scale(0.8);
+    right: 10px;
+    bottom: 10px;
+  }
+
+  .newsToggle {
+    transform: scale(0.7);
+    position: fixed;
+    right: -11px;
+    bottom: -11px;
+  }
+}
