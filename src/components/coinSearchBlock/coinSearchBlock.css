@@ -134,3 +134,9 @@ input {
   top: -30px;
   left: -30px;
 }
+
+.search {
+  width: 5.5em;
+  height: 45px;
+  padding: 0;
+}

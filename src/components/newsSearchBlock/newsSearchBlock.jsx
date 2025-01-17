@@ -29,9 +29,11 @@ function NewsSearchBlock({ onSearch }) {
           placeholder="Leave blank crypto!"
           onKeyDown={(e) => (e.key === "Enter" ? searchNews() : null)}
         />
+        <a href="#news" className="search">
         <button onClick={searchNews} className="custom-button search-button">
           Search
         </button>
+        </a>
       </div>
       <div
         onClick={FnSearchNewsTriangle}

@@ -36,3 +36,10 @@
   right: 50px;
   bottom: 50px;
 }
+
+.search {
+  width: 5.5em;
+  height: 45px;
+  padding: 0;
+  cursor: unset;
+}
