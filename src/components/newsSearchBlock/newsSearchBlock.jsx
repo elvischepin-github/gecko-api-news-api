@@ -29,6 +29,7 @@ function NewsSearchBlock({ onSearch }) {
           placeholder="Leave blank crypto!"
           onKeyDown={(e) => (e.key === "Enter" ? searchNews() : null)}
         />
+        <p className="searchCoinParagraph" >Leave blank crypto!</p>
         <a href="#news" className="search">
         <button onClick={searchNews} className="custom-button search-button">
           Search
