@@ -7,7 +7,7 @@
 .coinBlock {
   box-sizing: border-box;
   width: 14rem;
-  height: 20rem;
+  height: 22rem;
   padding-top: 20px;
   border: 1px solid #ccccccba;
   border-radius: 50% 50% 50% 50% / 10% 10% 10% 10%;
@@ -16,7 +16,6 @@
   font-family: "Roboto", sans-serif;
   transition: 200ms ease-in-out;
   background-color: rgba(233, 233, 233, 0.2);
-  scroll-margin-top: 168px;
 }
 
 .coinBlock img {

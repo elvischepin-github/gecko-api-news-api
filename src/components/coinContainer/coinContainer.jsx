@@ -1,5 +1,5 @@
 import CoinBlock from "../coinBlock/coinBlock";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import "./coinContainer.css";
 
 function CoinContainer({ searchedCoin }) {
@@ -34,6 +34,39 @@ function CoinContainer({ searchedCoin }) {
     }
     getApiData();
   }, [url, options, searchedCoin]);
+
+  const scrollContainerRef = useRef(null);
+
+  const handleWheel = (e) => {
+    if (scrollContainerRef.current) {
+      e.preventDefault();
+      e.stopPropagation();
+
+      scrollContainerRef.current.scrollLeft += e.deltaY * 6;
+      // const scrollTop = window.scrollY || document.documentElement.scrollTop;
+      // window.scrollTo(0, scrollTop);
+    }
+  };
+
+  const inside = (e) => {
+    e.preventDefault();
+    // const currentPos = document.body.scrollTop;
+    // document.body.scrollTop = currentPos;
+    document.body.style.overflow = "hidden";
+    document.body.style.position = "fixed";
+    document.body.style.width = "100%";
+    // document.body.style.top = `-${window.scrollY}px`;
+  };
+  const outside = (e) => {
+    e.preventDefault();
+    // const scrollY = document.body.style.top;
+    // document.body.style.position = "";
+    // document.body.style.top = "";
+    // document.body.style.width = "";
+    document.body.style.overflow = "auto";
+    document.body.style.overflowX = "hidden";
+    // window.scrollTo(0, parseInt(scrollY || "0") * -1);
+  };
 
   if (loading)
     return (
@@ -73,7 +106,13 @@ function CoinContainer({ searchedCoin }) {
           ></path>
         </svg>
       </div>
-      <div className="coinContainer">
+      <div
+        ref={scrollContainerRef}
+        onWheel={handleWheel}
+        onMouseEnter={inside}
+        onMouseLeave={outside}
+        className="coinContainer"
+      >
         {coinData.map((coin) => (
           <CoinBlock key={coin.id} data={coin} />
         ))}

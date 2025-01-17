@@ -12,6 +12,15 @@
   background-color: white;
   box-sizing: border-box;
   padding-bottom: 35px;
+  scroll-behavior: smooth;
+}
+
+.coinContainer {
+  scrollbar-width: auto !important;
+  -ms-overflow-style: auto !important;
+}
+.coinContainer::-webkit-scrollbar {
+  display: block !important;
 }
 
 .coinError {
