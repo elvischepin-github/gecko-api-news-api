@@ -15,7 +15,6 @@ function CoinContainer({ searchedCoin }) {
       try {
         const response = await fetch(url, options);
         const data = await response.json();
-
         const filteredData = searchedCoin
           ? data.filter(
               (coin) =>
@@ -23,7 +22,6 @@ function CoinContainer({ searchedCoin }) {
                 coin.symbol.toLowerCase().includes(searchedCoin.toLowerCase())
             )
           : data;
-
         setCoinData(filteredData);
         setLoading(false);
       } catch (error) {
@@ -32,7 +30,12 @@ function CoinContainer({ searchedCoin }) {
         console.error(error);
       }
     }
+
     getApiData();
+
+    const intervalId = setInterval(getApiData, 60000);
+
+    return () => clearInterval(intervalId);
   }, [url, options, searchedCoin]);
 
   const scrollContainerRef = useRef(null);
@@ -43,29 +46,19 @@ function CoinContainer({ searchedCoin }) {
       e.stopPropagation();
 
       scrollContainerRef.current.scrollLeft += e.deltaY * 6;
-      // const scrollTop = window.scrollY || document.documentElement.scrollTop;
-      // window.scrollTo(0, scrollTop);
     }
   };
 
   const inside = (e) => {
     e.preventDefault();
-    // const currentPos = document.body.scrollTop;
-    // document.body.scrollTop = currentPos;
     document.body.style.overflow = "hidden";
     document.body.style.position = "fixed";
     document.body.style.width = "100%";
-    // document.body.style.top = `-${window.scrollY}px`;
   };
   const outside = (e) => {
     e.preventDefault();
-    // const scrollY = document.body.style.top;
-    // document.body.style.position = "";
-    // document.body.style.top = "";
-    // document.body.style.width = "";
     document.body.style.overflow = "auto";
     document.body.style.overflowX = "hidden";
-    // window.scrollTo(0, parseInt(scrollY || "0") * -1);
   };
 
   if (loading)
