@@ -5,7 +5,7 @@ import "./newsContainer.css";
 
 function NewsContainer({ searchedNews }) {
   return (
-    <div className="newsContainer">
+    <div id="news" className="newsContainer">
       <NewsBlock searchedNews={searchedNews} />
       <FooterContainer />
     </div>
