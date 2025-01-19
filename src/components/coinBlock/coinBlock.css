@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
 :root {
@@ -6,15 +13,19 @@
 
 .coinBlock {
   position: relative;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   width: 14rem;
-  height: 22rem;
+  height: 24rem;
   padding-top: 20px;
   border: 1px solid #ccccccba;
   border-radius: 10px;
+  -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   text-align: center;
   font-family: "Roboto", sans-serif;
+  -webkit-transition: 200ms ease-in-out;
+  -o-transition: 200ms ease-in-out;
   transition: 200ms ease-in-out;
   background-color: rgba(233, 233, 233, 0.2);
   scroll-margin-top: 20px;
@@ -23,14 +34,16 @@
 .coinBlock img {
   width: 100px;
   height: 100px;
+  -o-object-fit: contain;
   object-fit: contain;
   margin: auto;
+  -webkit-filter: drop-shadow(0 5px 3px rgba(128, 128, 128, 0.2));
   filter: drop-shadow(0 5px 3px rgba(128, 128, 128, 0.2));
 }
 
 .coinBlock h4 {
   margin-top: 10px;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   color: var(--Links);
 }
 
@@ -48,11 +61,13 @@
 }
 
 .coinBlock li {
+  width: -webkit-max-content;
+  width: -moz-max-content;
   width: max-content;
   margin-left: 25%;
   font-size: 1rem;
   color: #555;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 }
 
 .priceDown {
@@ -63,9 +78,14 @@
 }
 
 .coinBlock:hover {
+  -webkit-transform: scale(1.05);
+  -ms-transform: scale(1.05);
   transform: scale(1.05);
+  -webkit-transition: 200ms ease-in-out;
+  -o-transition: 200ms ease-in-out;
   transition: 200ms ease-in-out;
   background-color: rgba(255, 255, 255, 1);
+  -webkit-box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
@@ -78,34 +98,66 @@
   height: 100%;
   border: 2px solid transparent;
   border-radius: 10px;
+  -webkit-animation: none;
   animation: none;
+}
+
+@-webkit-keyframes borderAnimation {
+  0% {
+    -webkit-clip-path: inset(0 100% 100% 0);
+    clip-path: inset(0 100% 100% 0);
+  }
+  25% {
+    -webkit-clip-path: inset(0 0 100% 0);
+    clip-path: inset(0 0 100% 0);
+  }
+  50% {
+    -webkit-clip-path: inset(0 0 0 0);
+    clip-path: inset(0 0 0 0);
+  }
+  75% {
+    -webkit-clip-path: inset(100% 0 0 0);
+    clip-path: inset(100% 0 0 0);
+  }
+  100% {
+    -webkit-clip-path: inset(0 100% 100% 0);
+    clip-path: inset(0 100% 100% 0);
+  }
 }
 
 @keyframes borderAnimation {
   0% {
+    -webkit-clip-path: inset(0 100% 100% 0);
     clip-path: inset(0 100% 100% 0);
   }
   25% {
+    -webkit-clip-path: inset(0 0 100% 0);
     clip-path: inset(0 0 100% 0);
   }
   50% {
+    -webkit-clip-path: inset(0 0 0 0);
     clip-path: inset(0 0 0 0);
   }
   75% {
+    -webkit-clip-path: inset(100% 0 0 0);
     clip-path: inset(100% 0 0 0);
   }
   100% {
+    -webkit-clip-path: inset(0 100% 100% 0);
     clip-path: inset(0 100% 100% 0);
   }
 }
 
 .coinBlock:hover::before {
   border-color: #00d493;
+  -webkit-animation: borderAnimation 1.5s linear infinite;
   animation: borderAnimation 1.5s linear infinite;
 }
 
 @media (width <= 1280px) {
   .coinBlock {
+    -webkit-transform: scale(0.9);
+    -ms-transform: scale(0.9);
     transform: scale(0.9);
   }
 }

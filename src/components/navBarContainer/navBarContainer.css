@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
 :root {
@@ -7,6 +14,7 @@
 * {
   margin: 0;
   padding: 0;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -18,13 +26,23 @@
   height: 64px;
   background-color: white;
   font-family: "Roboto", sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
 }
 
 .logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   margin-right: 1rem;
 }
@@ -35,7 +53,11 @@
 }
 
 .name {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   letter-spacing: 5px;
 }
@@ -48,11 +70,19 @@
 }
 
 .tabs {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   gap: 5rem;
   font-size: 1.25rem;
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
   flex: 1;
+  -webkit-box-pack: right;
+  -ms-flex-pack: right;
   justify-content: right;
   letter-spacing: 5px;
 }
@@ -61,6 +91,8 @@ a {
   text-decoration: none;
   color: black;
   position: relative;
+  -webkit-transition: 600ms;
+  -o-transition: 600ms;
   transition: 600ms;
 }
 
@@ -72,9 +104,17 @@ a {
   width: 100%;
   height: 3px;
   background-color: var(--meta);
+  -webkit-transform: scaleX(0);
+  -ms-transform: scaleX(0);
   transform: scaleX(0);
+  -webkit-transform-origin: center;
+  -ms-transform-origin: center;
   transform-origin: center;
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out;
+  -o-transition: transform 0.3s ease-in-out;
   transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
 }
 
 .links:hover {
@@ -82,6 +122,8 @@ a {
 }
 
 .tabs a.links[data-nav]:hover::after {
+  -webkit-transform: scaleX(1);
+  -ms-transform: scaleX(1);
   transform: scaleX(1);
 }
 
@@ -103,6 +145,8 @@ a {
 
 @media (920px <= width <= 1200px) {
   .tabs {
+    -webkit-box-pack: right;
+    -ms-flex-pack: right;
     justify-content: right;
     gap: 1rem;
   }
@@ -114,7 +158,11 @@ a {
 
 @media (350px <= width <= 920px) {
   .name {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
     justify-content: flex-start;
   }
 
@@ -123,6 +171,8 @@ a {
   }
 
   .icon-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     z-index: 1;
     padding-right: 10px;
@@ -142,6 +192,8 @@ a {
   }
 
   .icon-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     z-index: 1;
     padding-right: 10px;
@@ -157,16 +209,28 @@ a {
   background-color: white;
   width: 100%;
   height: 17rem;
+  -webkit-box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   gap: 10px;
   padding: 10px 0;
   z-index: 1;
   opacity: 0;
+  -webkit-transform: translateX(-20px);
+  -ms-transform: translateX(-20px);
   transform: translateX(-20px);
   pointer-events: none;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
 
@@ -174,6 +238,8 @@ a {
   text-decoration: none;
   color: black;
   font-size: 1.25rem;
+  -webkit-transition: color 0.3s ease-in-out;
+  -o-transition: color 0.3s ease-in-out;
   transition: color 0.3s ease-in-out;
 }
 
@@ -183,6 +249,8 @@ a {
 
 .mobile-menu.show {
   opacity: 1;
+  -webkit-transform: translateX(0);
+  -ms-transform: translateX(0);
   transform: translateX(0);
   pointer-events: auto;
 }

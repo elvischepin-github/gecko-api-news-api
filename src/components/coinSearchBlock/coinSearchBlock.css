@@ -1,6 +1,14 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 .searchBlock {
   background: rgba(255, 255, 255, 0.45);
   border-radius: 16px;
+  -webkit-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(9.2px);
   -webkit-backdrop-filter: blur(9.2px);
@@ -9,9 +17,20 @@
   height: 200px;
   width: 300px;
 
+  display: -webkit-box;
+
+  display: -ms-flexbox;
+
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: space-evenly;
+  -ms-flex-pack: space-evenly;
   justify-content: space-evenly;
 
   position: fixed;
@@ -23,7 +42,13 @@
 
   z-index: 1;
 
+  -webkit-transition: 200ms;
+
+  -o-transition: 200ms;
+
   transition: 200ms;
+
+  -webkit-box-shadow: 0 0 10px -5px black;
 
   box-shadow: 0 0 10px -5px black;
 
@@ -31,6 +56,7 @@
 }
 
 .blank {
+  -webkit-text-decoration: underline wavy rgb(0, 255, 177);
   text-decoration: underline wavy rgb(0, 255, 177);
   text-decoration-thickness: 1px;
 }
@@ -47,6 +73,8 @@
 
   background-color: #080807;
 
+  -webkit-clip-path: polygon(0% 0%, 100% 100%, 0% 100%);
+
   clip-path: polygon(0% 0%, 100% 100%, 0% 100%);
 }
 .searchTriangle:hover {
@@ -59,6 +87,20 @@
   width: 20px;
   height: 20px;
   background: rgb(0, 255, 177);
+  background: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    from(rgba(0, 123, 86, 1)),
+    color-stop(50%, rgba(0, 208, 144, 1)),
+    to(rgba(0, 255, 177, 1))
+  );
+  background: -o-linear-gradient(
+    left,
+    rgba(0, 123, 86, 1) 0%,
+    rgba(0, 208, 144, 1) 50%,
+    rgba(0, 255, 177, 1) 100%
+  );
   background: linear-gradient(
     90deg,
     rgba(0, 123, 86, 1) 0%,
@@ -77,6 +119,8 @@
   border: 1px solid white;
   top: 52px;
   left: 8px;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
   transform: rotate(45deg);
 }
 
@@ -123,6 +167,8 @@ input {
   border-radius: 50%;
   top: 100%;
   left: 100%;
+  -webkit-transition: 0.3s all;
+  -o-transition: 0.3s all;
   transition: 0.3s all;
   z-index: -1;
 }
@@ -148,6 +194,8 @@ input {
 
 @media (width <= 740px) {
   .searchTriangle {
+    -webkit-transform: scale(0.8);
+    -ms-transform: scale(0.8);
     transform: scale(0.8);
     position: fixed;
     left: -7px;
@@ -178,6 +226,8 @@ input {
   }
 
   .searchCoinParagraph {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     margin: 0;
     width: 130px;
@@ -186,6 +236,8 @@ input {
 
 @media (width <= 370px) {
   .searchBlock {
+    -webkit-transform: scale(0.8);
+    -ms-transform: scale(0.8);
     transform: scale(0.8);
   }
 
@@ -195,6 +247,8 @@ input {
   }
 
   .searchTriangle {
+    -webkit-transform: scale(0.7);
+    -ms-transform: scale(0.7);
     transform: scale(0.7);
     position: fixed;
     left: -11px;

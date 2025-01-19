@@ -1,15 +1,42 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 .containerTV {
   width: 100vw;
   height: 720px;
   background: rgb(0, 255, 177);
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(rgba(0, 255, 177, 1)),
+    color-stop(50%, rgba(0, 208, 144, 1)),
+    to(rgba(0, 123, 86, 1))
+  );
+  background: -o-linear-gradient(
+    top,
+    rgba(0, 255, 177, 1) 0%,
+    rgba(0, 208, 144, 1) 50%,
+    rgba(0, 123, 86, 1) 100%
+  );
   background: linear-gradient(
     180deg,
     rgba(0, 255, 177, 1) 0%,
     rgba(0, 208, 144, 1) 50%,
     rgba(0, 123, 86, 1) 100%
   );
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   scroll-margin-top: 100px;
   padding-bottom: 20px;
@@ -25,6 +52,8 @@
 
   position: relative !important;
 
+  -webkit-box-shadow: 0 -10px 20px -5px black !important;
+
   box-shadow: 0 -10px 20px -5px black !important;
 
   border-bottom-left-radius: 10px;
@@ -38,7 +67,11 @@ canvas {
   border: 2px solid rgb(38, 21, 0) !important;
   border-radius: 5px;
 
+  -webkit-box-shadow: -10px 10px 10px -10px #22222232 !important;
+
   box-shadow: -10px 10px 10px -10px #22222232 !important;
+
+  -webkit-filter: saturate(1.2) contrast(1.2) brightness(93%);
 
   filter: saturate(1.2) contrast(1.2) brightness(93%);
 
@@ -69,6 +102,20 @@ canvas {
     width: 100vw;
     height: 250px;
     background: rgb(0, 255, 177);
+    background: -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      from(rgba(0, 255, 177, 1)),
+      color-stop(50%, rgba(0, 208, 144, 1)),
+      to(rgba(0, 123, 86, 1))
+    );
+    background: -o-linear-gradient(
+      top,
+      rgba(0, 255, 177, 1) 0%,
+      rgba(0, 208, 144, 1) 50%,
+      rgba(0, 123, 86, 1) 100%
+    );
     background: linear-gradient(
       180deg,
       rgba(0, 255, 177, 1) 0%,
@@ -84,6 +131,7 @@ canvas {
     height: 195px;
 
     border-radius: 100px;
+    -webkit-box-shadow: none !important;
     box-shadow: none !important;
   }
   canvas {
@@ -95,6 +143,8 @@ canvas {
 
     border: none !important;
     border-radius: 10px;
+
+    -webkit-box-shadow: 0 0 10px -5px black !important;
 
     box-shadow: 0 0 10px -5px black !important;
   }

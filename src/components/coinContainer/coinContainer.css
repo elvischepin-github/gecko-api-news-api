@@ -1,15 +1,30 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 .widthFix {
+  width: -webkit-max-content !important;
+  width: -moz-max-content !important;
   width: max-content !important;
 }
 .coinContainer {
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
   flex-direction: row;
   gap: 24px;
   overflow-x: auto;
   overflow-y: hidden;
   padding: 24px;
   background-color: white;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   padding-bottom: 35px;
   scroll-behavior: smooth;
@@ -23,12 +38,15 @@
   display: block !important;
 }
 
-.coinError {
-}
-
 .coinLoaderPosition {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
 }
 
@@ -44,10 +62,18 @@
   mask: var(--_m);
   -webkit-mask-composite: source-out;
   mask-composite: subtract;
+  -webkit-animation: l3 1s infinite linear;
   animation: l3 1s infinite linear;
+}
+@-webkit-keyframes l3 {
+  to {
+    -webkit-transform: rotate(1turn);
+    transform: rotate(1turn);
+  }
 }
 @keyframes l3 {
   to {
+    -webkit-transform: rotate(1turn);
     transform: rotate(1turn);
   }
 }
@@ -64,6 +90,7 @@
   display: block;
   width: calc(100% + 1.3px);
   height: 80px;
+  -webkit-transform: rotateY(180deg);
   transform: rotateY(180deg);
 }
 
