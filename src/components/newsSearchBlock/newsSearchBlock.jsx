@@ -27,13 +27,17 @@ function NewsSearchBlock({ onSearch }) {
           onChange={(e) => setNewsOfInterest(e.target.value)}
           type="text"
           placeholder="Leave blank crypto!"
-          onKeyDown={(e) => (e.key === "Enter" ? searchNews() : null)}
+          onKeyDown={(e) =>
+            e.key === "Enter"
+              ? (searchNews(), (window.location.href = "#news"))
+              : null
+          }
         />
-        <p className="searchCoinParagraph" >Leave blank crypto!</p>
+        <p className="searchCoinParagraph">Leave blank crypto!</p>
         <a href="#news" className="search">
-        <button onClick={searchNews} className="custom-button search-button">
-          Search
-        </button>
+          <button onClick={searchNews} className="custom-button search-button">
+            Search
+          </button>
         </a>
       </div>
       <div

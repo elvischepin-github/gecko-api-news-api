@@ -36,13 +36,13 @@ function NewsBlock({ searchedNews }) {
     <>
       {newsData && newsData.articles && newsData.articles.length > 0
         ? newsData.articles
-            .slice(0, 20)
+            .slice(0, 40)
             .sort((a, b) => new Date(b.publishedAt) - new Date(a.publishedAt))
             .map((article) =>
               article.title === "[Removed]" ? (
                 (console.log("[Removed]"), null)
               ) : (
-                <div className="newsBlock" id="news" key={uuid()}>
+                <div className="newsBlock" key={uuid()}>
                   <div className="newsContent">
                     <h2>{article.title}</h2>
                     <b>{article.author}</b>

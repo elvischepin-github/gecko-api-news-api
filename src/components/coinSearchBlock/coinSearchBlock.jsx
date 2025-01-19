@@ -27,7 +27,11 @@ function CoinSearchBlock({ onSearch }) {
           onChange={(e) => setCoinOfInterest(e.target.value)}
           type="text"
           placeholder="Leave blank for all coins!"
-          onKeyDown={(e) => (e.key === "Enter" ? searchCoin() : null)}
+          onKeyDown={(e) =>
+            e.key === "Enter"
+              ? (searchCoin(), (window.location.href = "#crypto"))
+              : null
+          }
         />
         <p className="searchCoinParagraph">Leave blank for all coins!</p>
         <a href="#crypto" className="search">
