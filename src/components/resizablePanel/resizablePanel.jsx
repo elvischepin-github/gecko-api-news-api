@@ -4,14 +4,13 @@ import { Resizable } from "re-resizable";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight, faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 
-
 function ResizablePanel () {
 
     const [isVisible, setIsVisible] = useState(false);
     const [favoriteCoins, setFavoriteCoins] = useState([]);
     const [coinInput, setCoinInput] = useState("");
 
-    const allowedCoins = ["bitcoin", "ethereum", "xrp", "tether", "solana", "bnb", "dogecoin", "usdc", "lido staked ether", "tron", "avalanche", "chainlink", "sui", "stellar", "wrapped bitcoin", "hedera", "wrapped steth", "shiba inu", "polkadot", "weth", "litecoin", "bitcoin cash", "leo token", "uniswap", "official trump", "bitget token", "pepe", "hyperliquid", "wrapped eeth", "near protocol", "usds", "ethena usde", "aptos", "internet computer", "aave", "ondo", "vechain", "pol (ex-matic)", "monero", "ethereum classic", "render", "mantra", "algorand", "bittensor", "mantle", "cronos", "dai", "okb", "kaspa", "filecoin", "artificial superintelligence alliance", "arbitrum", "virtuals protocol", "cosmos hub", "tokenize xchange", "bonk", "ethena", "gate", "optimism", "celestia", "stacks", "coinbase wrapped btc", "injective", "theta network", "immutable", "raydium", "binance staked sol", "xdc network", "sonic", "the graph", "binance-peg weth", "jupiter", "worldcoin", "first digital usd", "lombard staked btc", "kelp dao restaked eth", "fartcoin", "dogwifhat", "movement", "pudgy penguins", "flare", "sei", "rocket pool eth", "fasttoken", "quant", "floki", "gala", "lido dao", "mantle staked ether", "the sandbox", "marinade staked sol", "jasmycoin", "usual usd", "solv protocol solvbtc", "nexo", "eos", "kaia", "kucoin"];
+    const allowedCoins = ["bitcoin", "ethereum", "xrp", "tether", "solana", "bnb", "dogecoin", "usdc", "cardano", "lido staked ether", "tron", "avalanche", "chainlink", "sui", "stellar", "wrapped bitcoin", "hedera", "wrapped steth", "shiba inu", "polkadot", "weth", "litecoin", "bitcoin cash", "leo token", "uniswap", "official trump", "bitget token", "pepe", "hyperliquid", "wrapped eeth", "near protocol", "usds", "ethena usde", "aptos", "internet computer", "aave", "ondo", "vechain", "pol (ex-matic)", "monero", "ethereum classic", "render", "mantra", "algorand", "bittensor", "mantle", "cronos", "dai", "okb", "kaspa", "filecoin", "artificial superintelligence alliance", "arbitrum", "virtuals protocol", "cosmos hub", "tokenize xchange", "bonk", "ethena", "gate", "optimism", "celestia", "stacks", "coinbase wrapped btc", "injective", "theta network", "immutable", "raydium", "binance staked sol", "xdc network", "sonic", "the graph", "binance-peg weth", "jupiter", "worldcoin", "first digital usd", "lombard staked btc", "kelp dao restaked eth", "fartcoin", "dogwifhat", "movement", "pudgy penguins", "flare", "sei", "rocket pool eth", "fasttoken", "quant", "floki", "gala", "lido dao", "mantle staked ether", "the sandbox", "marinade staked sol", "jasmycoin", "usual usd", "solv protocol solvbtc", "nexo", "eos", "kaia", "kucoin"];
 
     const formatCoinName = (coin) => {
         return coin.charAt(0).toUpperCase() + coin.slice(1).toLowerCase();
@@ -35,12 +34,18 @@ function ResizablePanel () {
         let updatedCoins = [...favoriteCoins];
     
         if (updatedCoins.length >= 4) {
-            updatedCoins.shift();
+            updatedCoins.pop();
         }
     
-        updatedCoins.push(newCoin);
+        updatedCoins.unshift(newCoin);
         setFavoriteCoins(updatedCoins);
         setCoinInput("");
+    };
+
+    const handleKeyDown = (e) => {
+        if (e.key === "Enter") {
+            addCoinToFavorites();
+        }
     };
 
     return (
@@ -81,6 +86,7 @@ function ResizablePanel () {
                                     type="text"
                                     value={coinInput}
                                     onChange={(e) => setCoinInput(e.target.value)}
+                                    onKeyDown={handleKeyDown}
                                     placeholder="Enter coin name"
                                     className="coinInput"
                                 />
