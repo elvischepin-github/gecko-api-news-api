@@ -1,4 +1,4 @@
-import React, { useState} from "react";
+import React, { useState, useEffect} from "react";
 import "./resizablePanel.css"
 import { Resizable } from "re-resizable";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -16,6 +16,10 @@ function ResizablePanel () {
     const formatCoinName = (coin) => {
         return coin.charAt(0).toUpperCase() + coin.slice(1).toLowerCase();
     }
+
+    const saveFavoritesToLocalStorage = (favorites) => {
+        localStorage.setItem("favoriteCoins", JSON.stringify(favorites));
+    };
 
     const addCoinToFavorites = () => {
         if (coinInput.trim() === "") return;
@@ -40,8 +44,16 @@ function ResizablePanel () {
     
         updatedCoins.push(newCoin);
         setFavoriteCoins(updatedCoins);
+        saveFavoritesToLocalStorage(updatedCoins);
         setCoinInput("");
     };
+
+    useEffect(() => {
+        const savedFavorites = JSON.parse(localStorage.getItem("favoriteCoins"));
+        if (savedFavorites && Array.isArray(savedFavorites)) {
+            setFavoriteCoins(savedFavorites);
+        }
+    }, []);
 
     return (
 
