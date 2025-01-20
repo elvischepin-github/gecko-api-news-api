@@ -5,6 +5,7 @@ import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { motion } from "framer-motion";
 
 function FooterContainer() {
   return (
@@ -24,17 +25,40 @@ function FooterContainer() {
           </svg>
         </div>
         <div className="footer-info">
-          <div className="about">
+          <motion.div
+            className="about"
+            initial={{ y: 40, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+          >
             <h1 id="about-us">About Us</h1>
-            <p>
+            <motion.p
+              initial={{ y: 40, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+            >
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Repellendus magni ipsum provident libero deleniti, modi
               perspiciatis.
-            </p>
-          </div>
-          <div className="contacts">
+            </motion.p>
+          </motion.div>
+
+          <motion.div
+            className="contacts"
+            initial={{ y: 40, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.4 }}
+          >
             <h1>Contact</h1>
-            <ul>
+            <motion.ul
+              initial={{ y: 40, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.6 }}
+            >
               <li>
                 <FontAwesomeIcon icon={faPhone} className="Contact-icons" />
                 +370 894 3215
@@ -50,38 +74,99 @@ function FooterContainer() {
                 />
                 Vilnius, Lithuania
               </li>
-            </ul>
-          </div>
-          <div className="useful-links">
+            </motion.ul>
+          </motion.div>
+
+          <motion.div
+            className="useful-links"
+            initial={{ y: 40, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.8 }}
+          >
             <h1>Quick Links</h1>
-            <a href="#">Services</a>
-            <a href="#">Projects</a>
-            <a href="#">Careers</a>
-            <a href="#">Privacy Policy</a>
-          </div>
-          <div className="follow">
+            <motion.a
+              href="#"
+              initial={{ y: 40, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 1 }}
+            >
+              Services
+            </motion.a>
+            <motion.a
+              href="#"
+              initial={{ y: 40, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 1.2 }}
+            >
+              Projects
+            </motion.a>
+            <motion.a
+              href="#"
+              initial={{ y: 40, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 1.4 }}
+            >
+              Careers
+            </motion.a>
+            <motion.a
+              href="#"
+              initial={{ y: 40, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 1.6 }}
+            >
+              Privacy Policy
+            </motion.a>
+          </motion.div>
+
+          <motion.div
+            className="follow"
+            initial={{ y: 40, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 1.8 }}
+          >
             <h1>Follow Us</h1>
             <div className="follow-icons">
-              <a href="">
-                <FontAwesomeIcon
-                  icon={faGithub}
-                  className="follow-icons-color"
-                />
-              </a>
-              <a href="">
-                <FontAwesomeIcon
-                  icon={faLinkedin}
-                  className="follow-icons-color"
-                />
-              </a>
-              <a href="">
-                <FontAwesomeIcon
-                  icon={faLinkedin}
-                  className="follow-icons-color"
-                />
-              </a>
+            <motion.a
+              href=""
+              initial={{ y: 40, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 2 }}
+            >
+              <FontAwesomeIcon icon={faGithub} className="follow-icons-color" />
+            </motion.a>
+            <motion.a
+              href=""
+              initial={{ y: 40, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 2.1 }}
+            >
+              <FontAwesomeIcon
+                icon={faLinkedin}
+                className="follow-icons-color"
+              />
+            </motion.a>
+            <motion.a
+              href=""
+              initial={{ y: 40, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 2.2 }}
+            >
+              <FontAwesomeIcon
+                icon={faLinkedin}
+                className="follow-icons-color"
+              />
+            </motion.a>
             </div>
-          </div>
+          </motion.div>
         </div>
         <hr />
         <div className="license">

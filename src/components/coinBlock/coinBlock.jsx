@@ -1,8 +1,19 @@
+import React from "react";
+import { motion } from "framer-motion";
 import "./coinBlock.css";
 
 function CoinBlock({ data }) {
   return (
-    <div className="coinBlock" id="crypto">
+    
+    <motion.div
+      className="coinBlock"
+      id="crypto"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{
+        duration: 3,
+      }}
+    >
       <img src={data.image} alt={data.name} />
       <h4>{data.name}</h4>
       <h5>Current Price: {data.current_price.toPrecision(6)}€</h5>
@@ -21,7 +32,7 @@ function CoinBlock({ data }) {
         <li>Highest {data.high_24h}€</li>
         <li>Lowest {data.low_24h}€</li>
       </ul>
-    </div>
+    </motion.div>
   );
 }
 
