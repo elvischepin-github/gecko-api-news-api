@@ -30,18 +30,17 @@ function FooterContainer() {
             initial={{ y: 40, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 0.5, delay: 1.5 }}
           >
             <h1 id="about-us">About Us</h1>
             <motion.p
               initial={{ y: 40, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.2 }}
+              transition={{ duration: 0.5, delay: 1.7 }}
             >
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Repellendus magni ipsum provident libero deleniti, modi
-              perspiciatis.
+              Sveiki atvyke į mūsų sveitainę. Joje galite stebėti naujienas,
+              crypto valiutos kainas ir dar daugiau!
             </motion.p>
           </motion.div>
 
@@ -50,14 +49,14 @@ function FooterContainer() {
             initial={{ y: 40, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.4 }}
+            transition={{ duration: 0.5, delay: 1.9 }}
           >
             <h1>Contact</h1>
             <motion.ul
               initial={{ y: 40, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.6 }}
+              transition={{ duration: 0.5, delay: 2.1 }}
             >
               <li>
                 <FontAwesomeIcon icon={faPhone} className="Contact-icons" />
@@ -82,7 +81,7 @@ function FooterContainer() {
             initial={{ y: 40, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.8 }}
+            transition={{ duration: 0.5, delay: 2.3 }}
           >
             <h1>Quick Links</h1>
             <motion.a
@@ -90,7 +89,7 @@ function FooterContainer() {
               initial={{ y: 40, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 1 }}
+              transition={{ duration: 0.5, delay: 2.5 }}
             >
               Services
             </motion.a>
@@ -99,7 +98,7 @@ function FooterContainer() {
               initial={{ y: 40, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 1.2 }}
+              transition={{ duration: 0.5, delay: 2.7 }}
             >
               Projects
             </motion.a>
@@ -108,7 +107,7 @@ function FooterContainer() {
               initial={{ y: 40, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 1.4 }}
+              transition={{ duration: 0.5, delay: 2.9 }}
             >
               Careers
             </motion.a>
@@ -117,7 +116,7 @@ function FooterContainer() {
               initial={{ y: 20, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 1.6 }}
+              transition={{ duration: 0.5, delay: 3.1 }}
             >
               Privacy Policy
             </motion.a>
@@ -128,49 +127,52 @@ function FooterContainer() {
             initial={{ y: 40, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 1.8 }}
+            transition={{ duration: 0.5, delay: 3.3 }}
           >
             <h1>Follow Us</h1>
             <div className="follow-icons">
-            <motion.a
-              href=""
-              initial={{ y: 40, opacity: 0 }}
-              whileInView={{ y: 0, opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 2 }}
-            >
-              <FontAwesomeIcon icon={faGithub} className="follow-icons-color" />
-            </motion.a>
-            <motion.a
-              href=""
-              initial={{ y: 40, opacity: 0 }}
-              whileInView={{ y: 0, opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 2.2 }}
-            >
-              <FontAwesomeIcon
-                icon={faLinkedin}
-                className="follow-icons-color"
-              />
-            </motion.a>
-            <motion.a
-              href=""
-              initial={{ y: 40, opacity: 0 }}
-              whileInView={{ y: 0, opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 2.4 }}
-            >
-              <FontAwesomeIcon
-                icon={faLinkedin}
-                className="follow-icons-color"
-              />
-            </motion.a>
+              <motion.a
+                href=""
+                initial={{ y: 40, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 3.5 }}
+              >
+                <FontAwesomeIcon
+                  icon={faGithub}
+                  className="follow-icons-color"
+                />
+              </motion.a>
+              <motion.a
+                href=""
+                initial={{ y: 40, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 3.7 }}
+              >
+                <FontAwesomeIcon
+                  icon={faLinkedin}
+                  className="follow-icons-color"
+                />
+              </motion.a>
+              <motion.a
+                href=""
+                initial={{ y: 40, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 3.9 }}
+              >
+                <FontAwesomeIcon
+                  icon={faLinkedin}
+                  className="follow-icons-color"
+                />
+              </motion.a>
             </div>
           </motion.div>
         </div>
         <hr />
         <div className="license">
-          <p>© {new Date().getFullYear()} Your Company. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Gecko&News. All rights reserved.</p>
         </div>
       </div>
     </>

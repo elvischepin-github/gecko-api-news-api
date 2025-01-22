@@ -16,17 +16,17 @@ function NavBarContainer() {
     <div className="container">
       <motion.div
         className="logo"
-        initial={{ opacity: 0, y: -165}}
+        initial={{ opacity: 0, y: -165 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 2}}
+        transition={{ duration: 2, delay: 2 }}
       >
         <img src="../src/assets/cn.png" alt="logo" id="logo" />
       </motion.div>
       <motion.div
         className="name"
-        initial={{ opacity: 0, y: -165}}
+        initial={{ opacity: 0, y: -165 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 2, delay: 0.3 }}
+        transition={{ duration: 2, delay: 2 }}
       >
         <p id="name">Gecko&News</p>
       </motion.div>
@@ -34,45 +34,53 @@ function NavBarContainer() {
         <motion.a
           href="#about-us"
           className="links"
-          initial={{ opacity: 0, y: -165}}
+          initial={{ opacity: 0, y: -165 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.6 }}
+          transition={{ duration: 1, delay: 2.6 }}
         >
-          About Us
+          <a href="#about-us" className="links" data-nav>
+            About Us
+          </a>
         </motion.a>
         <motion.a
           href="#news"
           className="links"
-          initial={{ opacity: 0, y: -165}}
+          initial={{ opacity: 0, y: -165 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.9 }}
+          transition={{ duration: 1, delay: 2.9 }}
         >
-          News
+          <a href="#news" className="links" data-nav>
+            News
+          </a>
         </motion.a>
         <motion.a
           href="#crypto"
           className="links"
-          initial={{ opacity: 0, y: -165}}
+          initial={{ opacity: 0, y: -165 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 1.2 }}
+          transition={{ duration: 1, delay: 3.2 }}
         >
-          Crypto
+          <a href="#crypto" className="links" data-nav>
+            Crypto
+          </a>
         </motion.a>
         <motion.a
           href="#top"
           className="links"
-          initial={{ opacity: 0, y: -165}}
+          initial={{ opacity: 0, y: -165 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 1.5 }}
+          transition={{ duration: 1, delay: 3.5 }}
         >
-          Top
+          <a href="#top" className="links" data-nav>
+            Top
+          </a>
         </motion.a>
       </div>
       <motion.div
         className="icon-container"
-        initial={{ opacity: 0, y: -165}}
+        initial={{ opacity: 0, y: -165 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1, delay: 1.8 }}
+        transition={{ duration: 1, delay: 3.8 }}
       >
         <FontAwesomeIcon icon={faBars} className="icon" onClick={toggleMenu} />
       </motion.div>

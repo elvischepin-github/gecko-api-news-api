@@ -8,250 +8,251 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
 :root {
-    --Links: #00d493;
+  --Links: #00d493;
 }
 
 .resizablePanel {
-    position: fixed;
-    top: 50%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    z-index: 0;
-    -webkit-transition: 0.4s;
-    -o-transition: 0.4s;
-    transition: 0.4s;
+  position: fixed;
+  top: 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  z-index: 0;
+  -webkit-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
+  font-family: "Roboto", sans-serif;
 }
 
 .panelVisible {
-    left: 0;
-    opacity: 1;
+  left: 0;
+  opacity: 1;
 }
 
 .panelHidden {
-    left: -1000px;
-    opacity: 0;
+  left: -1000px;
+  opacity: 0;
 }
 
 .resizablePanelContainer {
-    position: relative;
-    height: 100%;
+  position: relative;
+  height: 100%;
 }
 
 .resizableContent {
-    border: 1px solid lightgray;
-    background: white;
-    border-radius: 0 10px 10px 0;
-    height: 100%;
-    padding-top: 20px;
-    padding-left: 42px;
-    white-space: wrap;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+  border: 1px solid lightgray;
+  background: white;
+  border-radius: 0 10px 10px 0;
+  height: 100%;
+  padding-top: 20px;
+  padding-left: 42px;
+  white-space: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
 .panelContent {
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    font: 16px;
-    background: transparent;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  font: 16px;
+  background: transparent;
 }
 
 .inputSection {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    margin-bottom: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 20px;
 }
 
 .coinInput {
-    width: 90%;
-    height: 40px;
-    margin-bottom: 0px;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+  width: 90%;
+  height: 40px;
+  margin-bottom: 0px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 
 .inputSection .custom-button {
-    width: 90%;
-    height: 40px;
-    color: #00d493;
-    z-index: 1;
-    position: relative;
-    overflow: hidden;
-    margin-top: 20px;
+  width: 90%;
+  height: 40px;
+  color: #00d493;
+  z-index: 1;
+  position: relative;
+  overflow: hidden;
+  margin-top: 20px;
 }
 
 .inputSection .custom-button::before {
-    position: absolute;
-    content: "";
-    background: #00d493;
-    width: 350px;
-    height: 145px;
-    border-radius: 50%;
-    top: 100%;
-    left: 100%;
-    -webkit-transition: 0.3s all;
-    -o-transition: 0.3s all;
-    transition: 0.3s all;
-    z-index: -1;
+  position: absolute;
+  content: "";
+  background: #00d493;
+  width: 350px;
+  height: 145px;
+  border-radius: 50%;
+  top: 100%;
+  left: 100%;
+  -webkit-transition: 0.3s all;
+  -o-transition: 0.3s all;
+  transition: 0.3s all;
+  z-index: -1;
 }
 
 .inputSection .custom-button:hover {
-    color: white;
+  color: white;
 }
 
 .inputSection .custom-button:hover::before {
-    top: -30px;
-    left: -30px;
+  top: -30px;
+  left: -30px;
 }
 
 .coinList {
-    padding-left: 22px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    overflow-y: auto;
-    max-height: 100%;
-    -webkit-box-flex: 1;
-        -ms-flex-positive: 1;
-            flex-grow: 1;
+  padding-left: 22px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  overflow-y: auto;
+  max-height: 100%;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
 }
 
 .coinItem {
-    width: 90%;
-    background-color: #f0f0f0;
-    padding: 10px;
-    margin-bottom: 10px;
-    border-radius: 5px;
-    text-align: center;
+  width: 90%;
+  background-color: #f0f0f0;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  text-align: center;
 }
 
 .toggleButton {
-    margin-top: 20px;
-    height: 100px;
-    z-index: 1;
-    position: fixed;
-    top: 50%;
-    left: 0;
-    padding: 20px 10px;
-    background-color: #007b56;
-    color: white;
-    border: none;
-    border-radius: 0 10px 10px 0;
-    cursor: pointer;
-    -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    -webkit-transition: background-color 0.3s, -webkit-transform 0.3s;
-    transition: background-color 0.3s, -webkit-transform 0.3s;
-    -o-transition: transform 0.3s, background-color 0.3s;
-    transition: transform 0.3s, background-color 0.3s;
-    transition: transform 0.3s, background-color 0.3s, -webkit-transform 0.3s;
+  margin-top: 20px;
+  height: 100px;
+  z-index: 1;
+  position: fixed;
+  top: 40%;
+  left: 0;
+  padding: 20px 10px;
+  background-color: #007b56;
+  color: white;
+  border: none;
+  border-radius: 0 10px 10px 0;
+  cursor: pointer;
+  -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  -webkit-transition: background-color 0.3s, -webkit-transform 0.3s;
+  transition: background-color 0.3s, -webkit-transform 0.3s;
+  -o-transition: transform 0.3s, background-color 0.3s;
+  transition: transform 0.3s, background-color 0.3s;
+  transition: transform 0.3s, background-color 0.3s, -webkit-transform 0.3s;
 }
 
 .toggleButton:hover {
-    -webkit-transform: scale(1.1);
-    -ms-transform: scale(1.1);
-        transform: scale(1.1);
-    background-color: var(--Links);
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+  background-color: var(--Links);
 }
 
 .toggleButton svg {
-    font-size: 18px;
+  font-size: 18px;
 }
 
 @media (width <= 740px) {
-    .resizablePanel {
-        top: 60%;
-        width: 180px;
-        margin-top: -145px;
-    }
+  .resizablePanel {
+    top: 60%;
+    width: 180px;
+    margin-top: -145px;
+  }
 
-    .resizableContent {
-        padding-left: 45px;
-    }
+  .resizableContent {
+    padding-left: 45px;
+  }
 
-    .toggleButton {
-        padding: 40px 10px;
-        margin-top: 20px;
-        background-color: rgba(0, 123, 86, 0.9);
-    }
+  .toggleButton {
+    padding: 40px 10px;
+    margin-top: 20px;
+    background-color: rgba(0, 123, 86, 0.9);
+  }
 
-    .panelVisible {
-        width: 170px;
-    }
+  .panelVisible {
+    width: 170px;
+  }
 }
 
 @media (width <= 575px) {
-    .resizablePanel {
-        top: 65%;
-        width: 150px;
-        margin-top: -230px;
-    }
+  .resizablePanel {
+    top: 65%;
+    width: 150px;
+    margin-top: -230px;
+  }
 
-    .resizableContent {
-        padding-left: 42px;
-    }
+  .resizableContent {
+    padding-left: 42px;
+  }
 
-    .toggleButton {
-        padding: 30px 10px;
-        margin-top: 15px;
-        background-color: rgba(0, 123, 86, 0.8);
-    }
+  .toggleButton {
+    padding: 30px 10px;
+    margin-top: 15px;
+    background-color: rgba(0, 123, 86, 0.8);
+  }
 
-    .panelVisible {
-        width: 140px;
-    }
+  .panelVisible {
+    width: 140px;
+  }
 
-    .toggleButton svg {
-        font-size: 20px;
-    }
+  .toggleButton svg {
+    font-size: 20px;
+  }
 }
 
 @media (width <= 370px) {
-    .resizablePanel {
-        top: 70%;
-        width: 120px;
-        margin-top: -311px;
-    }
+  .resizablePanel {
+    top: 70%;
+    width: 120px;
+    margin-top: -311px;
+  }
 
-    .resizableContent {
-        padding-left: 37px;
-    }
+  .resizableContent {
+    padding-left: 37px;
+  }
 
-    .toggleButton {
-        padding: 25px 10px;
-        margin-top: 10px;
-        background-color: rgba(0, 123, 86, 0.7);
-    }
+  .toggleButton {
+    padding: 25px 10px;
+    margin-top: 10px;
+    background-color: rgba(0, 123, 86, 0.7);
+  }
 
-    .panelVisible {
-        width: 120px;
-    }
+  .panelVisible {
+    width: 120px;
+  }
 
-    .toggleButton svg {
-        font-size: 16px;
-    }
+  .toggleButton svg {
+    font-size: 16px;
+  }
 }
