@@ -114,7 +114,7 @@ function FooterContainer() {
             </motion.a>
             <motion.a
               href="#"
-              initial={{ y: 40, opacity: 0 }}
+              initial={{ y: 20, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 1.6 }}
@@ -146,7 +146,7 @@ function FooterContainer() {
               initial={{ y: 40, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 2.1 }}
+              transition={{ duration: 0.5, delay: 2.2 }}
             >
               <FontAwesomeIcon
                 icon={faLinkedin}
@@ -158,7 +158,7 @@ function FooterContainer() {
               initial={{ y: 40, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 2.2 }}
+              transition={{ duration: 0.5, delay: 2.4 }}
             >
               <FontAwesomeIcon
                 icon={faLinkedin}
