@@ -68,37 +68,38 @@ function ResizablePanel () {
             >
                 {(
                     <Resizable
-                        defaultSize={{
-                            width: 575,
-                            height: 175,
-                        }}
-                        minWidth={535}
-                        maxWidth={650}
-                        minHeight={175}
-                        maxHeight={175}
-                        className="resizableContent"
-                    >
-                        <div className="panelContent">
-                            <div className="coinList">
-                                {favoriteCoins.map((coin, index) => (
-                                    <div key={index} className="coinItem">
-                                        {formatCoinName(coin)}
-                                    </div>
-                                ))}
-                            </div>
-
-                            <div className="bottomSection">
-                                <input
-                                    type="text"
-                                    value={coinInput}
-                                    onChange={(e) => setCoinInput(e.target.value)}
-                                    placeholder="Enter coin name"
-                                    className="coinInput"
-                                />
-                                <button onClick={addCoinToFavorites} className="custom-button">Add to Favorites</button>
-                            </div>
+                    defaultSize={{
+                        width: 250,
+                        height: 400,
+                    }}
+                    minWidth={205}
+                    maxWidth={350}
+                    minHeight={390}
+                    maxHeight={400}
+                    className="resizableContent"
+                >
+                    <div className="panelContent">
+                        <div className="inputSection">
+                            <input
+                                type="text"
+                                value={coinInput}
+                                onChange={(e) => setCoinInput(e.target.value)}
+                                placeholder="Enter coin name"
+                                className="coinInput"
+                            />
+                            <button onClick={addCoinToFavorites} className="custom-button">
+                                Add to Favorites
+                            </button>
                         </div>
-                    </Resizable>
+                        <div className="coinList">
+                            {favoriteCoins.map((coin, index) => (
+                                <div key={index} className="coinItem">
+                                    {formatCoinName(coin)}
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </Resizable>
                 )}
             </div>
         </div>
