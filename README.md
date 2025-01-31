@@ -1,6 +1,13 @@
-Welcome to Crytpo & News!
+Link ➵
+---
+# Aprašymas
+Tai yra React Vite projektas sukurtas naudojantis CoinGecko API ir News API.
+Atributikai buvo sukurtas 3D Gecko Labs logotipo modelis ir objektas buvo integruotas naudojant Three.js biblioteka.
+Puslapis turi prisitaikomajį dizainą.
 
-News docs https://newsapi.org/docs/get-started#search
+---
 
-Coin Gecko docs https://docs.coingecko.com/reference/introduction
-Coin Gecko brand design https://brand.coingecko.com/visual-identity/color/core-brand-colors
+# Description
+This is a React Vite project created using the CoinGecko API and News API.
+For branding, a 3D Gecko Labs logo model was created and the object was integrated using the Three.js library.
+The page has a responsive design.
