@@ -6,7 +6,7 @@ import NewsSearchBlock from "./components/newsSearchBlock/newsSearchBlock";
 import NavBarContainer from "./components/navBarContainer/navBarContainer";
 import NewsContainer from "./components/newsContainer/newsContainer";
 import ThreeBlock from "./components/threeBlock/threeBlock";
-import ResizablePanel from "./components/resizablePanel/resizablePanel";
+// import ResizablePanel from "./components/resizablePanel/resizablePanel";
 
 function App() {
   const [searchedCoin, setSearchedCoin] = useState("");
@@ -28,7 +28,7 @@ function App() {
       <ThreeBlock />
       <CoinContainer searchedCoin={searchedCoin} />
       <NewsContainer searchedNews={searchedNews} />
-      <ResizablePanel/>
+      {/* <ResizablePanel/> */}
     </>
   );
 }
