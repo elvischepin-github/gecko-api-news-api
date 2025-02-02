@@ -21,7 +21,7 @@ For branding, a 3D Gecko Labs logo model was created and the object was integrat
 The page has a responsive design.
 
 ---
-
-![Screenshot 2025-02-02 at 10 04 17](https://github.com/user-attachments/assets/50032491-df7d-4652-ab8b-7f0f6acf689e)
----
-![Screenshot 2025-02-02 at 10 05 16](https://github.com/user-attachments/assets/d3094e21-08bd-4d3e-a6b4-978a322e6fed)
+![Screenshot 2025-02-02 at 10 31 46](https://github.com/user-attachments/assets/9f91298a-b6a8-4a30-8cc0-7c82e805d98b)
+![Screenshot 2025-02-02 at 10 32 26](https://github.com/user-attachments/assets/bda8965e-aeec-451b-9b91-4f777099b381)
+![Screenshot 2025-02-02 at 10 32 58](https://github.com/user-attachments/assets/fdcb6d02-fd82-4075-8304-0dad565b7d33)
+![Screenshot 2025-02-02 at 10 33 14](https://github.com/user-attachments/assets/cf65b49a-c1fe-479b-812a-70ffe4e6ce99)
