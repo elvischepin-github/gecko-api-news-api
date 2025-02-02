@@ -24,4 +24,4 @@ The page has a responsive design.
 ![Screenshot 2025-02-02 at 10 31 46](https://github.com/user-attachments/assets/9f91298a-b6a8-4a30-8cc0-7c82e805d98b)
 ![Screenshot 2025-02-02 at 10 32 26](https://github.com/user-attachments/assets/bda8965e-aeec-451b-9b91-4f777099b381)
 ![Screenshot 2025-02-02 at 10 32 58](https://github.com/user-attachments/assets/fdcb6d02-fd82-4075-8304-0dad565b7d33)
-![Screenshot 2025-02-02 at 10 33 14](https://github.com/user-attachments/assets/cf65b49a-c1fe-479b-812a-70ffe4e6ce99)
+![Screenshot 2025-02-02 at 10 55 47](https://github.com/user-attachments/assets/dc7b7f56-447d-42be-ac25-942b538f470b)
