@@ -9,7 +9,7 @@ export default defineConfig(({ mode }) => {
       "process.env.REACT_APP_GECKO_API": JSON.stringify(
         env.REACT_APP_GECKO_API
       ),
-      "process.env.REACT_APP_NEWS_API": JSON.stringify(env.REACT_APP_NEWS_API),
+      "process.env.VITE_NEWS_API_KEY": JSON.stringify(env.REACT_APP_NEWS_API),
       "process.env.NODE_ENV": JSON.stringify(mode),
       "process.env.NODE_ENV": JSON.stringify(
         isProduction ? "production" : "development"
