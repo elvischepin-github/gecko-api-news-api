@@ -4,35 +4,22 @@ import react from "@vitejs/plugin-react";
 export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd(), "");
   const isProduction = mode === "production";
-
   return {
     define: {
-      "process.env": {
-        NODE_ENV: JSON.stringify(isProduction ? "production" : "development"),
-        REACT_APP_GECKO_API: JSON.stringify(env.REACT_APP_GECKO_API),
-        REACT_APP_NEWS_API: JSON.stringify(env.REACT_APP_NEWS_API),
-      },
+      "process.env.REACT_APP_GECKO_API": JSON.stringify(
+        env.REACT_APP_GECKO_API
+      ),
+      "process.env.REACT_APP_NEWS_API": JSON.stringify(env.REACT_APP_NEWS_API),
+      "process.env.NODE_ENV": JSON.stringify(mode),
+      "process.env.NODE_ENV": JSON.stringify(
+        isProduction ? "production" : "development"
+      ),
     },
-    plugins: [
-      react({
-        jsxRuntime: "automatic",
-        babel: {
-          babelrc: false,
-          configFile: false,
-        },
-      }),
-    ],
+    plugins: [react()],
     build: {
-      minify: "terser",
+      minify: "esbuild",
       sourcemap: false,
       assetsDir: "assets",
-      terserOptions: {
-        compress: {
-          drop_console: isProduction,
-          drop_debugger: isProduction,
-          pure_funcs: ["console.log"],
-        },
-      },
       rollupOptions: {
         output: {
           manualChunks: undefined,
