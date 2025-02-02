@@ -31,6 +31,21 @@ export default defineConfig(({ mode }) => {
       port: process.env.PORT || 10000,
       strictPort: true,
       allowedHosts: ["coingecko-and-news.onrender.com"],
+      proxy: {
+        "/api/news": {
+          target: "https://newsapi.org/v2",
+          changeOrigin: true,
+          rewrite: (path) => path.replace(/^\/api\/news/, "/everything"),
+          configure: (proxy, options) => {
+            proxy.on("proxyReq", (proxyReq, req, res) => {
+              proxyReq.setHeader(
+                "Authorization",
+                `Bearer ${env.REACT_APP_NEWS_API}`
+              );
+            });
+          },
+        },
+      },
     },
     preview: {
       port: process.env.PORT || 10000,
