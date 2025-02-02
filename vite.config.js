@@ -3,6 +3,8 @@ import react from "@vitejs/plugin-react";
 
 export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd(), "");
+  const isProduction = mode === "production";
+
   return {
     define: {
       "process.env.REACT_APP_GECKO_API": JSON.stringify(
@@ -10,12 +12,20 @@ export default defineConfig(({ mode }) => {
       ),
       "process.env.REACT_APP_NEWS_API": JSON.stringify(env.REACT_APP_NEWS_API),
       "process.env.NODE_ENV": JSON.stringify(mode),
+      "process.env.NODE_ENV": JSON.stringify(
+        isProduction ? "production" : "development"
+      ),
     },
     plugins: [react()],
     build: {
       minify: "esbuild",
       sourcemap: false,
       assetsDir: "assets",
+      rollupOptions: {
+        output: {
+          manualChunks: undefined,
+        },
+      },
     },
     server: {
       host: true,
