@@ -7,20 +7,32 @@ export default defineConfig(({ mode }) => {
 
   return {
     define: {
-      "process.env.REACT_APP_GECKO_API": JSON.stringify(
-        env.REACT_APP_GECKO_API
-      ),
-      "process.env.REACT_APP_NEWS_API": JSON.stringify(env.REACT_APP_NEWS_API),
-      "process.env.NODE_ENV": JSON.stringify(mode),
-      "process.env.NODE_ENV": JSON.stringify(
-        isProduction ? "production" : "development"
-      ),
+      "process.env": {
+        NODE_ENV: JSON.stringify(isProduction ? "production" : "development"),
+        REACT_APP_GECKO_API: JSON.stringify(env.REACT_APP_GECKO_API),
+        REACT_APP_NEWS_API: JSON.stringify(env.REACT_APP_NEWS_API),
+      },
     },
-    plugins: [react()],
+    plugins: [
+      react({
+        jsxRuntime: "automatic",
+        babel: {
+          babelrc: false,
+          configFile: false,
+        },
+      }),
+    ],
     build: {
-      minify: "esbuild",
+      minify: "terser",
       sourcemap: false,
       assetsDir: "assets",
+      terserOptions: {
+        compress: {
+          drop_console: isProduction,
+          drop_debugger: isProduction,
+          pure_funcs: ["console.log"],
+        },
+      },
       rollupOptions: {
         output: {
           manualChunks: undefined,
