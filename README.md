@@ -1,4 +1,5 @@
 Link ➵ https://coingecko-and-news.onrender.com/
+---
 > Tinklapio užkrovimas gali trukti apie **minutę**, dėl nemokamų publikavimo paslaugų.
 
 > Please note that loading may take about a **minute** due to the use of free hosting.
