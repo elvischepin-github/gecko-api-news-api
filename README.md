@@ -8,6 +8,8 @@ Link ➵ https://coingecko-and-news.onrender.com/
 Tai yra React Vite projektas sukurtas naudojantis CoinGecko API ir News API.
 Svetainėje galima pamatyti 100 krypto valiutų ir 40 naujienų antraščių, valiutas galima filtruoti o naujienų rūšį (raktažodį) galima keisti paieškoje.
 
+## Palieskite interaktyvų GeckoCoin! ₿
+
 Atributikai buvo sukurtas 3D Gecko Labs logotipo modelis ir objektas buvo integruotas naudojant Three.js biblioteka.
 Puslapis turi prisitaikomajį dizainą.
 
@@ -16,6 +18,8 @@ Puslapis turi prisitaikomajį dizainą.
 # Description
 This is a React Vite project created using CoinGecko API and News API.
 The website displays 100 cryptocurrencies and 40 news headlines, with the ability to filter currencies and change the news type (keyword) in the search.
+
+## Touch the interactive GeckoCoin! ₿
 
 For branding, a 3D Gecko Labs logo model was created and the object was integrated using the Three.js library.
 The page has a responsive design.
