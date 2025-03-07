@@ -3,9 +3,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPhone } from "@fortawesome/free-solid-svg-icons";
 import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
-import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { faFacebook, faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
-import { motion } from "framer-motion";
 
 function FooterContainer() {
   return (
@@ -25,39 +24,17 @@ function FooterContainer() {
           </svg>
         </div>
         <div className="footer-info">
-          <motion.div
-            className="about"
-            initial={{ y: 40, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 1.5 }}
-          >
+          <div className="about">
             <h1 id="about-us">About Us</h1>
-            <motion.p
-              initial={{ y: 40, opacity: 0 }}
-              whileInView={{ y: 0, opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 1.7 }}
-            >
-              Sveiki atvyke į mūsų sveitainę. Joje galite stebėti naujienas,
-              crypto valiutos kainas ir dar daugiau!
-            </motion.p>
-          </motion.div>
+            <p>
+              Search for the latest news using keywords with the magnifying
+              glass on your right, and filter crypto coins on your left!
+            </p>
+          </div>
 
-          <motion.div
-            className="contacts"
-            initial={{ y: 40, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 1.9 }}
-          >
+          <div className="contacts">
             <h1>Contact</h1>
-            <motion.ul
-              initial={{ y: 40, opacity: 0 }}
-              whileInView={{ y: 0, opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 2.1 }}
-            >
+            <ul>
               <li>
                 <FontAwesomeIcon icon={faPhone} className="Contact-icons" />
                 +370 894 3215
@@ -73,107 +50,45 @@ function FooterContainer() {
                 />
                 Vilnius, Lithuania
               </li>
-            </motion.ul>
-          </motion.div>
+            </ul>
+          </div>
 
-          <motion.div
-            className="useful-links"
-            initial={{ y: 40, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 2.3 }}
-          >
+          <div className="useful-links">
             <h1>Quick Links</h1>
-            <motion.a
-              href="#"
-              initial={{ y: 40, opacity: 0 }}
-              whileInView={{ y: 0, opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 2.5 }}
-            >
-              Services
-            </motion.a>
-            <motion.a
-              href="#"
-              initial={{ y: 40, opacity: 0 }}
-              whileInView={{ y: 0, opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 2.7 }}
-            >
-              Projects
-            </motion.a>
-            <motion.a
-              href="#"
-              initial={{ y: 40, opacity: 0 }}
-              whileInView={{ y: 0, opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 2.9 }}
-            >
-              Careers
-            </motion.a>
-            <motion.a
-              href="#"
-              initial={{ y: 20, opacity: 0 }}
-              whileInView={{ y: 0, opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 3.1 }}
-            >
-              Privacy Policy
-            </motion.a>
-          </motion.div>
+            <a href="#">Services</a>
+            <a href="#">Projects</a>
+            <a href="#">Careers</a>
+            <a href="#">Privacy Policy</a>
+          </div>
 
-          <motion.div
-            className="follow"
-            initial={{ y: 40, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 3.3 }}
-          >
+          <div className="follow">
             <h1>Follow Us</h1>
             <div className="follow-icons">
-              <motion.a
-                href=""
-                initial={{ y: 40, opacity: 0 }}
-                whileInView={{ y: 0, opacity: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: 3.5 }}
-              >
+              <a href="#">
                 <FontAwesomeIcon
                   icon={faGithub}
                   className="follow-icons-color"
                 />
-              </motion.a>
-              <motion.a
-                href=""
-                initial={{ y: 40, opacity: 0 }}
-                whileInView={{ y: 0, opacity: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: 3.7 }}
-              >
+              </a>
+              <a href="#">
                 <FontAwesomeIcon
                   icon={faLinkedin}
                   className="follow-icons-color"
                 />
-              </motion.a>
-              <motion.a
-                href=""
-                initial={{ y: 40, opacity: 0 }}
-                whileInView={{ y: 0, opacity: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: 3.9 }}
-              >
+              </a>
+              <a href="#">
                 <FontAwesomeIcon
-                  icon={faLinkedin}
+                  icon={faFacebook}
                   className="follow-icons-color"
                 />
-              </motion.a>
+              </a>
             </div>
-          </motion.div>
+          </div>
         </div>
         <hr />
-        <div className="license">
+        {/* <div className="license">
           <p>© {new Date().getFullYear()} Gecko&News. All rights reserved.</p>
-        </div>
+        </div> */}
       </div>
     </>
   );
