@@ -23,6 +23,7 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  padding-bottom: 50px;
   -webkit-box-align: baseline;
   -ms-flex-align: baseline;
   align-items: baseline;
