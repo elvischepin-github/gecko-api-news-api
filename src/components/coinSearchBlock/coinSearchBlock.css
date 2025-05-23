@@ -218,8 +218,9 @@ input {
 
   input {
     width: 130px;
-    color: white;
+    color: black;
     margin-bottom: 0;
+    font-size: 0.7rem;
   }
 
   .searchCoinParagraph {
