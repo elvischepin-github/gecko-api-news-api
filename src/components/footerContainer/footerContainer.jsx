@@ -35,36 +35,42 @@ function FooterContainer() {
           <div className="contacts">
             <h1>Contact</h1>
             <ul>
-              <li>
+              {/* <li>
                 <FontAwesomeIcon icon={faPhone} className="Contact-icons" />
                 +370 894 3215
-              </li>
+              </li> */}
               <li>
                 <FontAwesomeIcon icon={faEnvelope} className="Contact-icons" />
-                crypto@gmail.com
+                <a
+                  style={{ color: "white", fontSize: "1rem" }}
+                  href="mailto:projektasxdevelopment@gmail.com"
+                >
+                  Email Us
+                </a>
               </li>
+
               <li>
                 <FontAwesomeIcon
                   icon={faLocationDot}
                   className="Contact-icons"
                 />
-                Vilnius, Lithuania
+                Vilnius
               </li>
             </ul>
           </div>
 
-          <div className="useful-links">
+          {/* <div className="useful-links">
             <h1>Quick Links</h1>
             <a href="#">Services</a>
             <a href="#">Projects</a>
             <a href="#">Careers</a>
             <a href="#">Privacy Policy</a>
-          </div>
+          </div> */}
 
           <div className="follow">
             <h1>Follow Us</h1>
             <div className="follow-icons">
-              <a href="#">
+              <a href="https://github.com/elvischepin-github/gecko-api-news-api">
                 <FontAwesomeIcon
                   icon={faGithub}
                   className="follow-icons-color"

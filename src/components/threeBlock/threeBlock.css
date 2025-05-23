@@ -80,6 +80,12 @@ canvas {
   left: 405px !important;
   top: 154px !important;
 }
+canvas:hover {
+  cursor: grab;
+}
+canvas:active {
+  cursor: grabbing;
+}
 
 @media (max-width: 1280px) {
   .TV {

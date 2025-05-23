@@ -20,7 +20,7 @@ function CoinSearchBlock({ onSearch }) {
     <>
       <div className="searchBlock">
         <h4 className="searchCoinText">
-          Search your <i className="blank">Coin</i> of interest!
+          Search your <b>Coin</b> of interest!
         </h4>
         <input
           value={coinOfInterest}

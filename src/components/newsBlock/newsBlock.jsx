@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { v4 as uuid } from "uuid";
 import "./newsBlock.css";
+import { div } from "motion/react-client";
 
 function NewsBlock({ searchedNews }) {
   const [newsData, setNewsData] = useState(null);

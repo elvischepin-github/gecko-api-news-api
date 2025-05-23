@@ -55,12 +55,6 @@
   opacity: 0;
 }
 
-.blank {
-  -webkit-text-decoration: underline wavy rgb(0, 255, 177);
-  text-decoration: underline wavy rgb(0, 255, 177);
-  text-decoration-thickness: 1px;
-}
-
 .searchTriangle {
   position: fixed;
   left: 0;
@@ -71,7 +65,11 @@
 
   z-index: 1;
 
-  background-color: #080807;
+  background: rgba(255, 255, 255, 0.45);
+  -webkit-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(9.2px);
+  -webkit-backdrop-filter: blur(9.2px);
 
   -webkit-clip-path: polygon(0% 0%, 100% 100%, 0% 100%);
 
@@ -102,13 +100,13 @@
     rgba(0, 255, 177, 1) 100%
   );
   background: linear-gradient(
-    90deg,
-    rgba(0, 123, 86, 1) 0%,
-    rgba(0, 208, 144, 1) 50%,
-    rgba(0, 255, 177, 1) 100%
+    45deg,
+    slategray 0%,
+    rgba(0, 255, 177, 1) 85%,
+    slategray 100%
   );
   border-radius: 50%;
-  border: 2px solid white;
+  border: 2px solid rgb(49, 49, 49);
   top: calc(45px - 11px);
   left: 11px;
 }
@@ -116,7 +114,7 @@
   content: "";
   position: absolute;
   height: 15px;
-  border: 1px solid white;
+  border: 1px solid black;
   top: 52px;
   left: 8px;
   -webkit-transform: rotate(45deg);
