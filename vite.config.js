@@ -21,6 +21,7 @@ export default defineConfig(({ mode }) => {
       host: true,
       port: process.env.PORT || 10000, // Use Render's PORT or fallback to 10000
       strictPort: true,
+      allowedHosts: ["coingecko-and-news.onrender.com"],
     },
     preview: {
       port: process.env.PORT || 10000,
