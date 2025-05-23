@@ -81,6 +81,14 @@ canvas {
   top: 154px !important;
 }
 
+canvas:hover {
+  cursor: grab;
+}
+
+canvas:active {
+  cursor: grabbing;
+}
+
 @media (max-width: 1280px) {
   .TV {
     background-image: url("../src/assets/dall-e-3.2.jpg");

@@ -20,7 +20,7 @@ function NewsSearchBlock({ onSearch }) {
     <>
       <div className="searchBlock newsSearch">
         <h4>
-          What <i className="blank">News</i> you want to see?
+          What <b>News</b> you want to see?
         </h4>
         <input
           value={newsOfInterest}
