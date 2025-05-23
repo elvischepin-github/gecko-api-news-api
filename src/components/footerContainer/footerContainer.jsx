@@ -38,13 +38,16 @@ function FooterContainer() {
               <li>
                 <FontAwesomeIcon icon={faEnvelope} className="Contact-icons" />
                 <a
-                  style={{ color: "white", fontSize: "1rem" }}
+                  style={{
+                    color: "white",
+                    fontSize: "1rem",
+                  }}
                   href="mailto:projektasxdevelopment@gmail.com"
                 >
                   Email Us
                 </a>
               </li>
-              <li>
+              <li style={{ textAlign: "left", paddingLeft: "5px" }}>
                 <FontAwesomeIcon
                   icon={faLocationDot}
                   className="Contact-icons"

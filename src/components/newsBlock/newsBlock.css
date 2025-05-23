@@ -318,7 +318,8 @@ a.news-link[data-news]:hover {
   }
 
   .urlToImageContainter {
-    width: 100%;
+    width: 100% !important;
+    min-height: 100px;
     -webkit-box-ordinal-group: 2;
     -ms-flex-order: 1;
     order: 1;
