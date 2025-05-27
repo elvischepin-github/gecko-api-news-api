@@ -1,4 +1,5 @@
 Link ➵ https://coingecko-and-news.onrender.com/ Published on _Render.com_
+> Initial load will take up to 30 seconds due to free _Render.com_ tier
 ---
 
 # Description
